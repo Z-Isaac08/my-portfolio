@@ -1,0 +1,119 @@
+{
+  "common": {
+    "viewProject": "Démo Live",
+    "viewCode": "Voir le Code",
+    "learnMore": "En Savoir Plus",
+    "getInTouch": "Me Contacter",
+    "downloadCV": "Télécharger CV",
+    "backToTop": "Retour en Haut"
+  },
+  "nav": {
+    "about": "À Propos",
+    "projects": "Projets",
+    "skills": "Compétences",
+    "journey": "Parcours",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "name": "Isaac N'CHO",
+    "title": "Ingénieur Logiciel & Spécialiste Cybersécurité",
+    "description": "Je crée des applications sécurisées et évolutives à l'intersection de l'ingénierie logicielle, de la cybersécurité et de l'IA. Actuellement étudiant à l'ESATIC, je développe des solutions qui comptent.",
+    "cta": {
+      "projects": "Découvrir Mes Projets",
+      "contact": "Me Contacter"
+    },
+    "stats": {
+      "years": "Années d'Apprentissage",
+      "projects": "Projets Réalisés",
+      "technologies": "Technologies"
+    },
+    "scroll": "Défiler pour explorer"
+  },
+  "about": {
+    "title": "À Propos",
+    "subtitle": "Un état d'esprit d'ingénieur, des solutions créatives",
+    "intro": "Je suis étudiant en 4ème année Cybersécurité & IA à l'ESATIC, passionné par la création de logiciels non seulement fonctionnels, mais sécurisés et élégants.",
+    "philosophy": {
+      "title": "Ma Philosophie",
+      "content": "Je crois que les grands logiciels naissent de l'intersection de principes d'ingénierie solides et d'une véritable empathie utilisateur. La sécurité n'est pas une réflexion après coup—elle est tissée dans chaque ligne de code que j'écris."
+    },
+    "approach": {
+      "title": "Mon Approche",
+      "items": [
+        {
+          "title": "Sécurité d'Abord",
+          "description": "Chaque projet commence par une modélisation des menaces et une conception d'architecture sécurisée."
+        },
+        {
+          "title": "Centré Utilisateur",
+          "description": "La technologie doit résoudre de vrais problèmes, pas en créer de nouveaux."
+        },
+        {
+          "title": "Apprentissage Continu",
+          "description": "Le paysage technologique évolue quotidiennement. Moi aussi."
+        }
+      ]
+    },
+    "currently": {
+      "title": "Actuellement",
+      "learning": "J'apprends : Cache Redis, orchestration Docker, tests de pénétration avancés",
+      "building": "Je construis : Des applications de qualité production avec la sécurité au cœur",
+      "exploring": "J'explore : Solutions de sécurité pilotées par l'IA et détection des menaces"
+    }
+  },
+  "projects": {
+    "title": "Travaux Sélectionnés",
+    "subtitle": "Des projets qui démontrent mes capacités d'ingénierie",
+    "featured": "Projet Vedette",
+    "viewAll": "Voir Tous les Projets",
+    "categories": {
+      "all": "Tous",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ai": "IA/ML",
+      "security": "Sécurité"
+    },
+    "details": {
+      "role": "Rôle",
+      "year": "Année",
+      "technologies": "Technologies",
+      "highlights": "Points Clés"
+    }
+  },
+  "skills": {
+    "title": "Expertise Technique",
+    "subtitle": "Des compétences affinées à travers des projets et un apprentissage continu"
+  },
+  "journey": {
+    "title": "Mon Parcours",
+    "subtitle": "Le chemin qui a façonné ma perspective d'ingénieur",
+    "types": {
+      "education": "Formation",
+      "work": "Expérience",
+      "project": "Projet"
+    }
+  },
+  "contact": {
+    "title": "Construisons Quelque Chose Ensemble",
+    "subtitle": "Vous avez un projet en tête ou souhaitez discuter d'opportunités ? J'aimerais beaucoup vous entendre.",
+    "form": {
+      "name": "Votre Nom",
+      "email": "Votre Email",
+      "message": "Votre Message",
+      "send": "Envoyer le Message",
+      "sending": "Envoi en cours..."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Localisation",
+      "availability": "Disponibilité",
+      "availableText": "Ouvert aux opportunités"
+    },
+    "social": "Me Suivre"
+  },
+  "footer": {
+    "copyright": "Tous droits réservés.",
+    "builtWith": "Construit avec Next.js, Tailwind CSS & Framer Motion"
+  }
+}

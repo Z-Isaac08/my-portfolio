@@ -1,0 +1,119 @@
+{
+  "common": {
+    "viewProject": "Live Demo",
+    "viewCode": "View Code",
+    "learnMore": "Learn More",
+    "getInTouch": "Get in Touch",
+    "downloadCV": "Download CV",
+    "backToTop": "Back to Top"
+  },
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "skills": "Skills",
+    "journey": "Journey",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "Isaac N'CHO",
+    "title": "Software Engineer & Cybersecurity Specialist",
+    "description": "Building secure, scalable applications at the intersection of software engineering, cybersecurity, and AI. Currently pursuing my degree at ESATIC while crafting solutions that matter.",
+    "cta": {
+      "projects": "Explore My Work",
+      "contact": "Let's Connect"
+    },
+    "stats": {
+      "years": "Years Learning",
+      "projects": "Projects Built",
+      "technologies": "Technologies"
+    },
+    "scroll": "Scroll to explore"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Engineering mindset, creative solutions",
+    "intro": "I'm a 4th-year Cybersecurity & AI student at ESATIC, passionate about building software that's not just functional, but secure and elegant.",
+    "philosophy": {
+      "title": "My Philosophy",
+      "content": "I believe great software emerges from the intersection of strong engineering principles and genuine user empathy. Security isn't an afterthought—it's woven into every line of code I write."
+    },
+    "approach": {
+      "title": "My Approach",
+      "items": [
+        {
+          "title": "Security-First",
+          "description": "Every project starts with threat modeling and secure architecture design."
+        },
+        {
+          "title": "User-Centric",
+          "description": "Technology should solve real problems, not create new ones."
+        },
+        {
+          "title": "Continuous Learning",
+          "description": "The tech landscape evolves daily. So do I."
+        }
+      ]
+    },
+    "currently": {
+      "title": "Currently",
+      "learning": "Learning: Redis caching, Docker orchestration, advanced penetration testing",
+      "building": "Building: Production-grade applications with security at their core",
+      "exploring": "Exploring: AI-driven security solutions and threat detection"
+    }
+  },
+  "projects": {
+    "title": "Selected Work",
+    "subtitle": "Projects that showcase my engineering capabilities",
+    "featured": "Featured Project",
+    "viewAll": "View All Projects",
+    "categories": {
+      "all": "All",
+      "web": "Web",
+      "mobile": "Mobile",
+      "ai": "AI/ML",
+      "security": "Security"
+    },
+    "details": {
+      "role": "Role",
+      "year": "Year",
+      "technologies": "Technologies",
+      "highlights": "Key Highlights"
+    }
+  },
+  "skills": {
+    "title": "Technical Expertise",
+    "subtitle": "Capabilities honed through projects and continuous learning"
+  },
+  "journey": {
+    "title": "My Journey",
+    "subtitle": "The path that shaped my engineering perspective",
+    "types": {
+      "education": "Education",
+      "work": "Work",
+      "project": "Project"
+    }
+  },
+  "contact": {
+    "title": "Let's Build Something Together",
+    "subtitle": "Have a project in mind or want to discuss opportunities? I'd love to hear from you.",
+    "form": {
+      "name": "Your Name",
+      "email": "Your Email",
+      "message": "Your Message",
+      "send": "Send Message",
+      "sending": "Sending..."
+    },
+    "info": {
+      "email": "Email",
+      "location": "Location",
+      "availability": "Availability",
+      "availableText": "Open to opportunities"
+    },
+    "social": "Connect With Me"
+  },
+  "footer": {
+    "copyright": "All rights reserved.",
+    "builtWith": "Built with Next.js, Tailwind CSS & Framer Motion"
+  }
+}
