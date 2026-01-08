@@ -1,11 +1,14 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { SectionContainer, SectionHeader } from "@/components/section-container";
-import { MotionSection, MotionStagger, MotionItem } from "@/components/motion";
+import { MotionItem, MotionSection, MotionStagger } from "@/components/motion";
+import {
+  SectionContainer,
+  SectionHeader,
+} from "@/components/section-container";
 import { skillCategories } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 export function Skills() {
   const t = useTranslations("skills");

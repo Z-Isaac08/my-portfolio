@@ -17,7 +17,7 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Isaac N'CHO",
-    "title": "Software Engineer & Cybersecurity Specialist",
+    "title": "Software Engineer & Cybersecurity and AI enthusiast",
     "description": "Building secure, scalable applications at the intersection of software engineering, cybersecurity, and AI. Currently pursuing my degree at ESATIC while crafting solutions that matter.",
     "cta": {
       "projects": "Explore My Work",
@@ -79,6 +79,81 @@
       "year": "Year",
       "technologies": "Technologies",
       "highlights": "Key Highlights"
+    },
+    "items": {
+      "studyspace": {
+        "title": "StudySpace",
+        "description": "Collaborative study platform with real-time tools and organized workspaces.",
+        "longDescription": "A comprehensive collaborative study platform designed for students. Features organized workspaces, timed study sessions with auto-save, integrated whiteboard and note-taking tools. Built to replace fragmented toolsets (Discord + Google Docs) with a unified, distraction-free environment.",
+        "role": "Full-Stack Developer",
+        "highlights": [
+          "Real-time whiteboard and note-taking integration",
+          "Automated session tracking with auto-save",
+          "Workspace management with invite system",
+          "Modern mobile-first UI with Shadcn/ui"
+        ]
+      },
+      "akiba-hub": {
+        "title": "AkibaHub",
+        "description": "Economic intelligence platform for the Ivorian agri-food sector (Private Enterprise Project)",
+        "longDescription": "A comprehensive economic intelligence platform designed for the Ivorian agri-food sector. As a Private Enterprise Project, source code is not available. The system combines automated data collection from external APIs (like FAOSTAT) with dynamic visualization of economic indicators, serving as a strategic decision-support tool.",
+        "role": "Full-Stack Developer",
+        "highlights": [
+          "Designed 3-tier architecture (React/NestJS/FastAPI)",
+          "Automated data collection pipelines",
+          "Real-time KPI dashboards and alert systems",
+          "Unified Process (UP) methodology with UML"
+        ]
+      },
+      "xpense": {
+        "title": "Xpense",
+        "description": "Real-time expense tracking with intelligent categorization",
+        "longDescription": "A comprehensive expense management solution built with ReactJS and Firebase. Features real-time synchronization across devices, automated expense categorization, and insightful financial analytics.",
+        "role": "Full-Stack Developer",
+        "highlights": [
+          "Real-time data synchronization with Firebase Realtime Database",
+          "Automated expense categorization using pattern matching",
+          "Interactive dashboards with spending analytics",
+          "PWA support for offline functionality"
+        ]
+      },
+
+      "ace-app": {
+        "title": "ACE_APP",
+        "description": "Smart attendance management for educational institutions",
+        "longDescription": "A mobile-first attendance tracking solution designed for schools and universities. Built with Flutter for cross-platform deployment, featuring offline support and intelligent reporting.",
+        "role": "Mobile Developer",
+        "highlights": [
+          "Cross-platform iOS and Android support with Flutter",
+          "Offline-first architecture with local SQLite storage",
+          "Automated attendance reports and analytics",
+          "QR code-based check-in system"
+        ]
+      },
+      "industry-4": {
+        "title": "Industry 4.0 - Livestock AI",
+        "description": "AI-driven livestock optimization for sustainable farming",
+        "longDescription": "An innovative AI solution for livestock management that leverages machine learning to optimize feeding schedules, health monitoring, and resource allocation for sustainable farming practices.",
+        "role": "Team Lead & AI Developer",
+        "highlights": [
+          "Led a team of 4 developers in agile methodology",
+          "Implemented predictive models for livestock health monitoring",
+          "Reduced resource waste by 30% through optimized scheduling",
+          "Integrated real-time sensor data processing"
+        ]
+      },
+      "e-docs": {
+        "title": "E-Docs",
+        "description": "Digital library and documentation management system",
+        "longDescription": "A modern documentation platform designed for educational institutions, featuring advanced search capabilities, version control, and collaborative editing features.",
+        "role": "Full-Stack Developer",
+        "highlights": [
+          "Full-text search with Elasticsearch integration",
+          "Document versioning and change tracking",
+          "Role-based access control system",
+          "RESTful API with comprehensive documentation"
+        ]
+      }
     }
   },
   "skills": {
@@ -92,6 +167,75 @@
       "education": "Education",
       "work": "Work",
       "project": "Project"
+    },
+    "experiences": {
+      "esatic-master": {
+        "title": "Master's - Cybersecurity & AI Specialization",
+        "organization": "ESATIC - École Supérieure Africaine des TIC",
+        "period": "2025 - Present",
+        "description": "Specializing in advanced cybersecurity concepts and AI integration for security applications.",
+        "achievements": [
+          "Focus on AI-driven security solutions",
+          "Advanced cryptography and secure protocols",
+          "Penetration testing and vulnerability assessment"
+        ]
+      },
+      "akiba-internship": {
+        "title": "Fullstack Web Developer Intern",
+        "organization": "Akiba Solution",
+        "period": "March 2025 - September 2025",
+        "description": "Designed and developed AkibaHub, an economic intelligence platform for the Ivorian agri-food sector, combining automated data collection and dynamic visualization of economic indicators.",
+        "achievements": [
+          "Built a complete 3-tier architecture with ReactJS, NestJS, FastAPI & PostgreSQL",
+          "Implemented automated data collection from external APIs (FAOSTAT)",
+          "Developed interactive dashboards with real-time KPIs and alerts system",
+          "Designed UML diagrams and followed Unified Process methodology"
+        ]
+      },
+      "technovore-hackathon": {
+        "title": "2nd Prize - TECHNOVORE HACKATHON",
+        "organization": "Technovore Competition",
+        "period": "Feb 28 - Mar 2, 2025",
+        "description": "Developed 'BioGuard', an intelligent anti-poaching system combining satellite mapping, AI-equipped drones, and acoustic sensors.",
+        "achievements": [
+          "Awarded 2nd Prize for the innovative solution",
+          "Designed hybrid LoRaWAN/VSAT network architecture for remote areas",
+          "Implemented real-time alert system for agents via smartwatches",
+          "Teammates: ABE Monnet Anderson, ALIMBE Ashley Ange-Baruk"
+        ]
+      },
+      "esatic-licence": {
+        "title": "Bachelor's - Network Systems & Telecommunications",
+        "organization": "ESATIC - École Supérieure Africaine des TIC",
+        "period": "2022 - 2025",
+        "description": "Comprehensive foundation in network architecture, systems administration, and software development.",
+        "achievements": [
+          "Strong foundation in networking protocols",
+          "Full-stack web and mobile development skills",
+          "Database design and administration"
+        ]
+      },
+      "industry-project": {
+        "title": "Team Lead - Industry 4.0 Project",
+        "organization": "Academic Project",
+        "period": "2023",
+        "description": "Led a team in developing an AI-powered livestock optimization solution as part of an Industry 4.0 initiative.",
+        "achievements": [
+          "Managed team of 4 developers using Agile methodology",
+          "Delivered project 2 weeks ahead of schedule",
+          "Achieved 30% resource optimization in testing"
+        ]
+      },
+      "bac": {
+        "title": "Baccalauréat Série C",
+        "organization": "Lycée Moderne Aboisso",
+        "period": "2021 - 2022",
+        "description": "Scientific baccalaureate with focus on mathematics and physics.",
+        "achievements": [
+          "Strong mathematical and analytical foundation",
+          "Physics and chemistry fundamentals"
+        ]
+      }
     }
   },
   "contact": {

@@ -1,16 +1,20 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { StarField } from "@/components/star-field";
 import { Button } from "@/components/ui/button";
-import { siteConfig, heroStats } from "@/lib/data";
+import { heroStats, siteConfig } from "@/lib/data";
+import { motion } from "framer-motion";
+import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function Hero() {
   const t = useTranslations("hero");
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Star field background */}
+      <StarField />
+
       {/* Background gradient */}
       <div className="absolute inset-0 gradient-bg opacity-50" />
       <div className="absolute inset-0 gradient-radial" />
@@ -91,10 +95,10 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
-          <Button size="lg" asChild className="min-w-[180px]">
+          <Button size="lg" asChild className="min-w-45">
             <a href="#projects">{t("cta.projects")}</a>
           </Button>
-          <Button size="lg" variant="outline" asChild className="min-w-[180px]">
+          <Button size="lg" variant="outline" asChild className="min-w-45">
             <a href="#contact">{t("cta.contact")}</a>
           </Button>
         </motion.div>
@@ -110,7 +114,15 @@ export function Hero() {
             <div key={index} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold">{stat.value}</div>
               <div className="text-xs sm:text-sm text-muted-foreground">
-                {t(`stats.${stat.label === "Years Learning" ? "years" : stat.label === "Projects Built" ? "projects" : "technologies"}`)}
+                {t(
+                  `stats.${
+                    stat.label === "Years Learning"
+                      ? "years"
+                      : stat.label === "Projects Built"
+                      ? "projects"
+                      : "technologies"
+                  }`
+                )}
               </div>
             </div>
           ))}

@@ -1,10 +1,20 @@
 "use client";
 
+import { MotionItem, MotionSection, MotionStagger } from "@/components/motion";
+import {
+  SectionContainer,
+  SectionHeader,
+} from "@/components/section-container";
 import { motion } from "framer-motion";
+import {
+  BookOpen,
+  Code2,
+  Compass,
+  Shield,
+  Sparkles,
+  Users,
+} from "lucide-react";
 import { useTranslations } from "next-intl";
-import { Shield, Users, Sparkles, BookOpen, Code2, Compass } from "lucide-react";
-import { SectionContainer, SectionHeader } from "@/components/section-container";
-import { MotionSection, MotionStagger, MotionItem } from "@/components/motion";
 
 const approaches = [
   { icon: Shield, key: 0 },
@@ -98,7 +108,11 @@ export function About() {
                   <MotionItem key={index}>
                     <motion.div
                       whileHover={{ x: 4 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 17,
+                      }}
                       className="glass rounded-xl p-5 cursor-default"
                     >
                       <div className="flex items-start gap-4">

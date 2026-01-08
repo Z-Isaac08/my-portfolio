@@ -1,13 +1,24 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { GraduationCap, Briefcase, Rocket } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { SectionContainer, SectionHeader } from "@/components/section-container";
 import { MotionSection } from "@/components/motion";
-import { experiences } from "@/lib/data";
+import {
+    SectionContainer,
+    SectionHeader,
+} from "@/components/section-container";
+import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import { Briefcase, GraduationCap, Rocket } from "lucide-react";
+import { useTranslations } from "next-intl";
+
+const experienceKeys = [
+  { id: "esatic-master", type: "education" },
+  { id: "akiba-internship", type: "work" },
+  { id: "technovore-hackathon", type: "project" },
+  { id: "industry-project", type: "project" },
+  { id: "esatic-licence", type: "education" },
+  { id: "bac", type: "education" },
+] as const;
 
 const typeIcons = {
   education: GraduationCap,
@@ -34,9 +45,18 @@ export function Journey() {
           <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
 
           <div className="space-y-8 md:space-y-12">
-            {experiences.map((exp, index) => {
+            {experienceKeys.map((exp, index) => {
               const Icon = typeIcons[exp.type];
               const isEven = index % 2 === 0;
+
+              // Get translated content
+              const title = t(`experiences.${exp.id}.title`);
+              const organization = t(`experiences.${exp.id}.organization`);
+              const period = t(`experiences.${exp.id}.period`);
+              const description = t(`experiences.${exp.id}.description`);
+              const achievements = t.raw(
+                `experiences.${exp.id}.achievements`
+              ) as string[];
 
               return (
                 <motion.div
@@ -55,7 +75,9 @@ export function Journey() {
                     className={cn(
                       "absolute left-4 md:left-1/2 w-3 h-3 rounded-full border-2 bg-background",
                       "transform -translate-x-1.5 md:-translate-x-1.5 mt-1.5",
-                      typeColors[exp.type].replace("bg-", "border-").split(" ")[0]
+                      typeColors[exp.type]
+                        .replace("bg-", "border-")
+                        .split(" ")[0]
                     )}
                   />
 
@@ -69,7 +91,11 @@ export function Journey() {
                     <motion.div
                       className="glass rounded-xl p-5"
                       whileHover={{ y: -2 }}
-                      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 400,
+                        damping: 30,
+                      }}
                     >
                       {/* Type badge and period */}
                       <div
@@ -86,19 +112,19 @@ export function Journey() {
                           {t(`types.${exp.type}`)}
                         </Badge>
                         <span className="text-xs text-muted-foreground">
-                          {exp.period}
+                          {period}
                         </span>
                       </div>
 
                       {/* Title & Organization */}
-                      <h3 className="font-semibold mb-1">{exp.title}</h3>
+                      <h3 className="font-semibold mb-1">{title}</h3>
                       <p className="text-sm text-primary mb-2">
-                        {exp.organization}
+                        {organization}
                       </p>
 
                       {/* Description */}
                       <p className="text-sm text-muted-foreground mb-3">
-                        {exp.description}
+                        {description}
                       </p>
 
                       {/* Achievements */}
@@ -108,7 +134,7 @@ export function Journey() {
                           isEven ? "md:text-right" : ""
                         )}
                       >
-                        {exp.achievements.map((achievement, i) => (
+                        {achievements.map((achievement, i) => (
                           <li
                             key={i}
                             className={cn(

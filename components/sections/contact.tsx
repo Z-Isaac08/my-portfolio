@@ -1,27 +1,32 @@
 "use client";
 
-import { useState } from "react";
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import {
-  Mail,
-  MapPin,
-  Clock,
-  Send,
-  Github,
-  Linkedin,
-  CheckCircle,
-  Loader2,
-} from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { SectionContainer, SectionHeader } from "@/components/section-container";
 import { MotionSection } from "@/components/motion";
+import {
+  SectionContainer,
+  SectionHeader,
+} from "@/components/section-container";
+import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/lib/data";
 import { cn } from "@/lib/utils";
+import { motion } from "framer-motion";
+import {
+  CheckCircle,
+  Clock,
+  Github,
+  Linkedin,
+  Loader2,
+  Mail,
+  MapPin,
+  Send,
+} from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 export function Contact() {
   const t = useTranslations("contact");
-  const [formState, setFormState] = useState<"idle" | "sending" | "sent">("idle");
+  const [formState, setFormState] = useState<"idle" | "sending" | "sent">(
+    "idle"
+  );
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -36,7 +41,11 @@ export function Contact() {
     await new Promise((resolve) => setTimeout(resolve, 1500));
 
     // Open mailto as fallback
-    const mailtoLink = `mailto:${siteConfig.email}?subject=Portfolio Contact from ${formData.name}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
+    const mailtoLink = `mailto:${
+      siteConfig.email
+    }?subject=Portfolio Contact from ${formData.name}&body=${encodeURIComponent(
+      formData.message
+    )}%0A%0AFrom: ${formData.email}`;
     window.location.href = mailtoLink;
 
     setFormState("sent");
@@ -267,7 +276,8 @@ export function Contact() {
               className="p-6 border-l-2 border-primary/30"
             >
               <p className="text-muted-foreground italic">
-                &ldquo;The best way to predict the future is to create it.&rdquo;
+                &ldquo;The best way to predict the future is to create
+                it.&rdquo;
               </p>
               <p className="text-sm text-muted-foreground mt-2">
                 — Peter Drucker

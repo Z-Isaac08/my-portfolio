@@ -1,15 +1,17 @@
 "use client";
 
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { ExternalLink, Github, ChevronRight, Star } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { MotionSection } from "@/components/motion";
+import {
+    SectionContainer,
+    SectionHeader,
+} from "@/components/section-container";
 import { Badge } from "@/components/ui/badge";
-import { SectionContainer, SectionHeader } from "@/components/section-container";
-import { MotionSection, MotionStagger, MotionItem } from "@/components/motion";
+import { Button } from "@/components/ui/button";
 import { projects, type Project } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { AnimatePresence, motion } from "framer-motion";
+import { ChevronRight, ExternalLink, Github, Star } from "lucide-react";
+import { useTranslations } from "next-intl";
+import { useState } from "react";
 
 const categories = ["all", "web", "mobile", "ai"] as const;
 
@@ -39,7 +41,10 @@ export function Projects() {
               key={category}
               variant={activeCategory === category ? "default" : "outline"}
               size="sm"
-              onClick={() => setActiveCategory(category)}
+              onClick={() => {
+                setActiveCategory(category);
+                setExpandedProject(null);
+              }}
               className="capitalize"
             >
               {t(`categories.${category}`)}
@@ -48,33 +53,61 @@ export function Projects() {
         </div>
 
         {/* Featured Projects */}
-        <MotionStagger className="space-y-8 mb-12">
-          {featuredProjects.map((project) => (
-            <MotionItem key={project.id}>
-              <FeaturedProjectCard
-                project={project}
-                isExpanded={expandedProject === project.id}
-                onToggle={() =>
-                  setExpandedProject(
-                    expandedProject === project.id ? null : project.id
-                  )
-                }
-                t={t}
-                tc={tc}
-              />
-            </MotionItem>
-          ))}
-        </MotionStagger>
+        <AnimatePresence mode="wait">
+          <motion.div
+            key={activeCategory}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3 }}
+            className="space-y-8 mb-12"
+          >
+            {featuredProjects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, delay: index * 0.1 }}
+              >
+                <FeaturedProjectCard
+                  project={project}
+                  isExpanded={expandedProject === project.id}
+                  onToggle={() =>
+                    setExpandedProject(
+                      expandedProject === project.id ? null : project.id
+                    )
+                  }
+                  t={t}
+                  tc={tc}
+                />
+              </motion.div>
+            ))}
+          </motion.div>
+        </AnimatePresence>
 
         {/* Other Projects Grid */}
         {otherProjects.length > 0 && (
-          <MotionStagger className="grid gap-6 md:grid-cols-2">
-            {otherProjects.map((project) => (
-              <MotionItem key={project.id}>
-                <ProjectCard project={project} t={t} tc={tc} />
-              </MotionItem>
-            ))}
-          </MotionStagger>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={`other-${activeCategory}`}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, delay: 0.2 }}
+              className="grid gap-6 md:grid-cols-2"
+            >
+              {otherProjects.map((project, index) => (
+                <motion.div
+                  key={project.id}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
+                >
+                  <ProjectCard project={project} t={t} tc={tc} />
+                </motion.div>
+              ))}
+            </motion.div>
+          </AnimatePresence>
         )}
       </MotionSection>
     </SectionContainer>
@@ -94,6 +127,8 @@ function FeaturedProjectCard({
   t: ReturnType<typeof useTranslations>;
   tc: ReturnType<typeof useTranslations>;
 }) {
+  const highlights = [0, 1, 2, 3]; // We assume 4 highlights per project for simplicity or we can check translation keys if dynamic length is needed, but fixed 4 is safer for now based on JSON structure
+
   return (
     <motion.div
       layout
@@ -117,8 +152,12 @@ function FeaturedProjectCard({
         </div>
 
         {/* Title & Description */}
-        <h3 className="text-xl md:text-2xl font-bold mb-2">{project.title}</h3>
-        <p className="text-muted-foreground mb-4">{project.description}</p>
+        <h3 className="text-xl md:text-2xl font-bold mb-2">
+          {t(`items.${project.id}.title`)}
+        </h3>
+        <p className="text-muted-foreground mb-4">
+          {t(`items.${project.id}.description`)}
+        </p>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 mb-4">
@@ -157,7 +196,7 @@ function FeaturedProjectCard({
             >
               <div className="pt-4 border-t border-border space-y-4">
                 <p className="text-sm text-muted-foreground">
-                  {project.longDescription}
+                  {t(`items.${project.id}.longDescription`)}
                 </p>
 
                 <div className="grid gap-4 md:grid-cols-2">
@@ -166,7 +205,7 @@ function FeaturedProjectCard({
                       {t("details.role")}
                     </h4>
                     <p className="text-sm text-muted-foreground">
-                      {project.role}
+                      {t(`items.${project.id}.role`)}
                     </p>
                   </div>
                   <div>
@@ -174,13 +213,13 @@ function FeaturedProjectCard({
                       {t("details.highlights")}
                     </h4>
                     <ul className="space-y-1">
-                      {project.highlights.map((highlight, i) => (
+                      {highlights.map((i) => (
                         <li
                           key={i}
                           className="text-sm text-muted-foreground flex items-start gap-2"
                         >
                           <span className="mt-1.5 h-1 w-1 rounded-full bg-primary shrink-0" />
-                          {highlight}
+                          {t(`items.${project.id}.highlights.${i}`)}
                         </li>
                       ))}
                     </ul>
@@ -241,9 +280,11 @@ function ProjectCard({
         <span className="text-xs text-muted-foreground">{project.year}</span>
       </div>
 
-      <h3 className="text-lg font-semibold mb-2">{project.title}</h3>
-      <p className="text-sm text-muted-foreground mb-4 flex-grow">
-        {project.description}
+      <h3 className="text-lg font-semibold mb-2">
+        {t(`items.${project.id}.title`)}
+      </h3>
+      <p className="text-sm text-muted-foreground mb-4 grow">
+        {t(`items.${project.id}.description`)}
       </p>
 
       <div className="flex flex-wrap gap-1.5 mb-4">

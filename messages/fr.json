@@ -17,7 +17,7 @@
   "hero": {
     "greeting": "Bonjour, je suis",
     "name": "Isaac N'CHO",
-    "title": "Ingénieur Logiciel & Spécialiste Cybersécurité",
+    "title": "Ingénieur Logiciel & Passionné de Cybersécurité et IA",
     "description": "Je crée des applications sécurisées et évolutives à l'intersection de l'ingénierie logicielle, de la cybersécurité et de l'IA. Actuellement étudiant à l'ESATIC, je développe des solutions qui comptent.",
     "cta": {
       "projects": "Découvrir Mes Projets",
@@ -79,6 +79,81 @@
       "year": "Année",
       "technologies": "Technologies",
       "highlights": "Points Clés"
+    },
+    "items": {
+      "studyspace": {
+        "title": "StudySpace",
+        "description": "Plateforme d'étude collaborative avec outils temps réel et espaces de travail organisés.",
+        "longDescription": "Une plateforme d'étude collaborative complète conçue pour les étudiants. Dispose d'espaces de travail organisés, de sessions d'étude chronométrées avec sauvegarde automatique, et d'outils intégrés de tableau blanc et prise de notes. Conçue pour remplacer les outils fragmentés (Discord + Google Docs) par un environnement unifié.",
+        "role": "Développeur Full-Stack",
+        "highlights": [
+          "Intégration tableau blanc et prise de notes temps réel",
+          "Suivi de session automatisé avec sauvegarde auto",
+          "Gestion d'espaces de travail avec système d'invitation",
+          "Interface mobile-first moderne avec Shadcn/ui"
+        ]
+      },
+      "akiba-hub": {
+        "title": "AkibaHub",
+        "description": "Plateforme de veille économique pour le secteur agroalimentaire ivoirien (Projet d'Entreprise Privé)",
+        "longDescription": "Une plateforme complète de veille économique conçue pour le secteur agroalimentaire ivoirien. En tant que projet d'entreprise privé, le code source n'est pas disponible. Le système combine la collecte automatisée de données à partir d'API externes (comme FAOSTAT) avec une visualisation dynamique des indicateurs économiques.",
+        "role": "Développeur Full-Stack",
+        "highlights": [
+          "Conception d'une architecture 3-tiers (React/NestJS/FastAPI)",
+          "Pilotes de collecte de données automatisés",
+          "Tableaux de bord KPI temps réel et systèmes d'alertes",
+          "Méthodologie Processus Unifié (UP) avec UML"
+        ]
+      },
+      "xpense": {
+        "title": "Xpense",
+        "description": "Suivi des dépenses en temps réel avec catégorisation intelligente",
+        "longDescription": "Une solution complète de gestion des dépenses construite avec ReactJS et Firebase. Fonctionnalités de synchronisation en temps réel sur tous les appareils, catégorisation automatisée des dépenses et analyses financières détaillées.",
+        "role": "Développeur Full-Stack",
+        "highlights": [
+          "Synchronisation de données temps réel avec Firebase Realtime Database",
+          "Catégorisation automatisée des dépenses par reconnaissance de motifs",
+          "Tableaux de bord interactifs avec analyses de dépenses",
+          "Support PWA pour fonctionnalité hors ligne"
+        ]
+      },
+
+      "ace-app": {
+        "title": "ACE_APP",
+        "description": "Gestion intelligente des présences pour établissements scolaires",
+        "longDescription": "Une solution de suivi des présences mobile-first conçue pour les écoles et universités. Construite avec Flutter pour un déploiement multiplateforme, avec support hors ligne et reporting intelligent.",
+        "role": "Développeur Mobile",
+        "highlights": [
+          "Support multiplateforme iOS et Android avec Flutter",
+          "Architecture offline-first avec stockage local SQLite",
+          "Rapports de présence automatisés et analyses",
+          "Système d'émargement par QR code"
+        ]
+      },
+      "industry-4": {
+        "title": "Industrie 4.0 - IA Bétail",
+        "description": "Optimisation du bétail pilotée par l'IA pour l'agriculture durable",
+        "longDescription": "Une solution IA innovante pour la gestion du bétail qui exploite le machine learning pour optimiser les calendriers d'alimentation, le suivi de santé et l'allocation des ressources pour des pratiques agricoles durables.",
+        "role": "Team Lead & Développeur IA",
+        "highlights": [
+          "Direction d'une équipe de 4 développeurs en méthodologie agile",
+          "Implémentation de modèles prédictifs pour le suivi santé du bétail",
+          "Réduction de 30% du gaspillage de ressources via planification optimisée",
+          "Intégration du traitement de données capteurs temps réel"
+        ]
+      },
+      "e-docs": {
+        "title": "E-Docs",
+        "description": "Bibliothèque numérique et système de gestion documentaire",
+        "longDescription": "Une plateforme de documentation moderne conçue pour les établissements éducatifs, offrant des fonctionnalités de recherche avancée, de contrôle de version et d'édition collaborative.",
+        "role": "Développeur Full-Stack",
+        "highlights": [
+          "Recherche plein texte avec intégration Elasticsearch",
+          "Versionnage de documents et suivi des modifications",
+          "Système de contrôle d'accès basé sur les rôles",
+          "API RESTful avec documentation complète"
+        ]
+      }
     }
   },
   "skills": {
@@ -92,6 +167,75 @@
       "education": "Formation",
       "work": "Expérience",
       "project": "Projet"
+    },
+    "experiences": {
+      "esatic-master": {
+        "title": "Master - Spécialisation Cybersécurité & IA",
+        "organization": "ESATIC - École Supérieure Africaine des TIC",
+        "period": "2025 - Présent",
+        "description": "Spécialisation en concepts avancés de cybersécurité et intégration de l'IA pour les applications de sécurité.",
+        "achievements": [
+          "Focus sur les solutions de sécurité pilotées par l'IA",
+          "Cryptographie avancée et protocoles sécurisés",
+          "Tests de pénétration et évaluation des vulnérabilités"
+        ]
+      },
+      "akiba-internship": {
+        "title": "Stagiaire Développeur Web Fullstack",
+        "organization": "Akiba Solution",
+        "period": "Mars 2025 - Septembre 2025",
+        "description": "Conception et développement d'AkibaHub, une plateforme de veille économique pour le secteur agroalimentaire ivoirien, combinant collecte automatisée des données et visualisation dynamique des indicateurs économiques.",
+        "achievements": [
+          "Construction d'une architecture 3-tiers complète avec ReactJS, NestJS, FastAPI & PostgreSQL",
+          "Implémentation de la collecte automatisée de données depuis des APIs externes (FAOSTAT)",
+          "Développement de tableaux de bord interactifs avec KPIs temps réel et système d'alertes",
+          "Conception de diagrammes UML et suivi de la méthodologie Processus Unifié"
+        ]
+      },
+      "technovore-hackathon": {
+        "title": "2ème Prix - TECHNOVORE HACKATHON",
+        "organization": "Concours Technovore",
+        "period": "28 Fév - 2 Mars 2025",
+        "description": "Conception d'un système intelligent de lutte contre le braconnage (BioGuard) combinant cartographie satellite, drones équipés d'IA et capteurs acoustiques.",
+        "achievements": [
+          "2ème Prix obtenu pour la solution innovante",
+          "Architecture réseau hybride LoRa/LoRaWAN et VSAT pour les zones reculées",
+          "Système d'alerte en temps réel pour les agents via montres connectées",
+          "Coéquipiers : ABE Monnet Anderson, ALIMBE Ashley Ange-Baruk"
+        ]
+      },
+      "esatic-licence": {
+        "title": "Licence - Systèmes Réseaux & Télécommunications",
+        "organization": "ESATIC - École Supérieure Africaine des TIC",
+        "period": "2022 - 2025",
+        "description": "Formation complète en architecture réseau, administration système et développement logiciel.",
+        "achievements": [
+          "Solide base en protocoles réseau",
+          "Compétences en développement web et mobile full-stack",
+          "Conception et administration de bases de données"
+        ]
+      },
+      "industry-project": {
+        "title": "Chef d'Équipe - Projet Industrie 4.0",
+        "organization": "Projet Académique",
+        "period": "2023",
+        "description": "Direction d'une équipe pour développer une solution d'optimisation d'élevage alimentée par l'IA dans le cadre d'une initiative Industrie 4.0.",
+        "achievements": [
+          "Gestion d'une équipe de 4 développeurs avec méthodologie Agile",
+          "Livraison du projet 2 semaines en avance",
+          "Optimisation des ressources de 30% lors des tests"
+        ]
+      },
+      "bac": {
+        "title": "Baccalauréat Série C",
+        "organization": "Lycée Moderne Aboisso",
+        "period": "2021 - 2022",
+        "description": "Baccalauréat scientifique avec spécialisation en mathématiques et physique.",
+        "achievements": [
+          "Solide base mathématique et analytique",
+          "Fondamentaux en physique et chimie"
+        ]
+      }
     }
   },
   "contact": {

@@ -1,7 +1,7 @@
 "use client";
 
-import { motion, type Variants } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { motion, type Variants } from "framer-motion";
 import type { ComponentProps, ReactNode } from "react";
 
 // Animation variants

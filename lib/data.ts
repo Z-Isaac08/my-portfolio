@@ -1,12 +1,10 @@
 import {
+  Brain,
+  Cloud,
   Code2,
+  Database,
   Shield,
   Smartphone,
-  Database,
-  Cloud,
-  Brain,
-  GitBranch,
-  Layers,
   type LucideIcon,
 } from "lucide-react";
 
@@ -71,6 +69,31 @@ export const navigation = [
 ] as const;
 
 export const projects: Project[] = [
+  {
+    id: "studyspace",
+    title: "StudySpace", 
+    description: "Collaborative study platform", 
+    longDescription: "", 
+    technologies: ["Next.js", "Supabase", "Tailwind CSS", "Liveblocks"],
+    category: "web",
+    github: "https://github.com/Z-Isaac08/studyspace",
+    featured: true,
+    year: "2024",
+    role: "Full-Stack Developer",
+    highlights: [],
+  },
+  {
+    id: "akiba-hub",
+    title: "AkibaHub", 
+    description: "Economic intelligence platform", 
+    longDescription: "", 
+    technologies: ["React", "NestJS", "FastAPI", "PostgreSQL"],
+    category: "web",
+    featured: true,
+    year: "2025",
+    role: "Full-Stack Developer",
+    highlights: [],
+  },
   {
     id: "xpense",
     title: "Xpense",
@@ -152,7 +175,8 @@ export const skillCategories: SkillCategory[] = [
   {
     id: "frontend",
     title: "Frontend Engineering",
-    description: "Building responsive, accessible, and performant user interfaces",
+    description:
+      "Building responsive, accessible, and performant user interfaces",
     icon: Code2,
     skills: [
       { name: "React / Next.js", level: 5 },
@@ -230,7 +254,7 @@ export const experiences: Experience[] = [
     id: "esatic-4",
     title: "4th Year - Cybersecurity & AI Specialization",
     organization: "ESATIC - École Supérieure Africaine des TIC",
-    period: "2024 - Present",
+    period: "2025 - Present",
     description:
       "Specializing in advanced cybersecurity concepts and AI integration for security applications.",
     achievements: [
@@ -241,24 +265,10 @@ export const experiences: Experience[] = [
     type: "education",
   },
   {
-    id: "esatic-1-3",
-    title: "Network Systems & Telecommunications",
-    organization: "ESATIC - École Supérieure Africaine des TIC",
-    period: "2022 - 2024",
-    description:
-      "Comprehensive foundation in network architecture, systems administration, and software development.",
-    achievements: [
-      "Strong foundation in networking protocols",
-      "Full-stack web and mobile development skills",
-      "Database design and administration",
-    ],
-    type: "education",
-  },
-  {
     id: "industry-project",
     title: "Team Lead - Industry 4.0 Project",
     organization: "Academic Project",
-    period: "2023",
+    period: "2025",
     description:
       "Led a team in developing an AI-powered livestock optimization solution as part of an Industry 4.0 initiative.",
     achievements: [
@@ -267,6 +277,20 @@ export const experiences: Experience[] = [
       "Achieved 30% resource optimization in testing",
     ],
     type: "project",
+  },
+  {
+    id: "esatic-1-3",
+    title: "Network Systems & Telecommunications",
+    organization: "ESATIC - École Supérieure Africaine des TIC",
+    period: "2022 - 2025",
+    description:
+      "Comprehensive foundation in network architecture, systems administration, and software development.",
+    achievements: [
+      "Strong foundation in networking protocols",
+      "Full-stack web and mobile development skills",
+      "Database design and administration",
+    ],
+    type: "education",
   },
   {
     id: "bac",

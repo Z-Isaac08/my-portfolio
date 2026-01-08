@@ -1,11 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
-import { ArrowUp, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
 import { siteConfig } from "@/lib/data";
+import { motion } from "framer-motion";
+import { ArrowUp, Heart } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
   const t = useTranslations("footer");
