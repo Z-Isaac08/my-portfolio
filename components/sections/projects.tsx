@@ -1,45 +1,40 @@
-"use client";
+'use client';
 
-import { MotionSection } from "@/components/motion";
-import {
-    SectionContainer,
-    SectionHeader,
-} from "@/components/section-container";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { projects, type Project } from "@/lib/data";
-import { AnimatePresence, motion } from "framer-motion";
-import { ChevronRight, ExternalLink, Github, Star } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { MotionSection } from '@/components/motion';
+import { SectionContainer, SectionHeader } from '@/components/section-container';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { projects, type Project } from '@/lib/data';
+import { AnimatePresence, motion } from 'framer-motion';
+import { ChevronRight, ExternalLink, Github, Star } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
-const categories = ["all", "web", "mobile", "ai"] as const;
+const categories = ['all', 'web', 'mobile', 'ai', 'security', 'network'] as const;
 
 export function Projects() {
-  const t = useTranslations("projects");
-  const tc = useTranslations("common");
-  const [activeCategory, setActiveCategory] = useState<string>("all");
+  const t = useTranslations('projects');
+  const tc = useTranslations('common');
+  const [activeCategory, setActiveCategory] = useState<string>('all');
   const [expandedProject, setExpandedProject] = useState<string | null>(null);
 
   const filteredProjects =
-    activeCategory === "all"
-      ? projects
-      : projects.filter((p) => p.category === activeCategory);
+    activeCategory === 'all' ? projects : projects.filter(p => p.category === activeCategory);
 
-  const featuredProjects = filteredProjects.filter((p) => p.featured);
-  const otherProjects = filteredProjects.filter((p) => !p.featured);
+  const featuredProjects = filteredProjects.filter(p => p.featured);
+  const otherProjects = filteredProjects.filter(p => !p.featured);
 
   return (
     <SectionContainer id="projects">
       <MotionSection>
-        <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeader title={t('title')} subtitle={t('subtitle')} />
 
         {/* Category filters */}
         <div className="flex flex-wrap justify-center gap-2 mb-12">
-          {categories.map((category) => (
+          {categories.map(category => (
             <Button
               key={category}
-              variant={activeCategory === category ? "default" : "outline"}
+              variant={activeCategory === category ? 'default' : 'outline'}
               size="sm"
               onClick={() => {
                 setActiveCategory(category);
@@ -73,9 +68,7 @@ export function Projects() {
                   project={project}
                   isExpanded={expandedProject === project.id}
                   onToggle={() =>
-                    setExpandedProject(
-                      expandedProject === project.id ? null : project.id
-                    )
+                    setExpandedProject(expandedProject === project.id ? null : project.id)
                   }
                   t={t}
                   tc={tc}
@@ -134,7 +127,7 @@ function FeaturedProjectCard({
       layout
       className="glass rounded-2xl overflow-hidden"
       whileHover={{ y: -2 }}
-      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
     >
       <div className="p-6 md:p-8">
         {/* Header */}
@@ -142,7 +135,7 @@ function FeaturedProjectCard({
           <div className="flex items-center gap-3">
             <Badge variant="secondary" className="text-xs">
               <Star className="h-3 w-3 mr-1" />
-              {t("featured")}
+              {t('featured')}
             </Badge>
             <Badge variant="outline" className="text-xs capitalize">
               {project.category}
@@ -152,16 +145,12 @@ function FeaturedProjectCard({
         </div>
 
         {/* Title & Description */}
-        <h3 className="text-xl md:text-2xl font-bold mb-2">
-          {t(`items.${project.id}.title`)}
-        </h3>
-        <p className="text-muted-foreground mb-4">
-          {t(`items.${project.id}.description`)}
-        </p>
+        <h3 className="text-xl md:text-2xl font-bold mb-2">{t(`items.${project.id}.title`)}</h3>
+        <p className="text-muted-foreground mb-4">{t(`items.${project.id}.description`)}</p>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 mb-4">
-          {project.technologies.map((tech) => (
+          {project.technologies.map(tech => (
             <Badge key={tech} variant="secondary" className="text-xs">
               {tech}
             </Badge>
@@ -169,17 +158,9 @@ function FeaturedProjectCard({
         </div>
 
         {/* Expand/Collapse button */}
-        <Button
-          variant="ghost"
-          size="sm"
-          onClick={onToggle}
-          className="mb-4 text-muted-foreground"
-        >
-          {tc("learnMore")}
-          <motion.span
-            animate={{ rotate: isExpanded ? 90 : 0 }}
-            transition={{ duration: 0.2 }}
-          >
+        <Button variant="ghost" size="sm" onClick={onToggle} className="mb-4 text-muted-foreground">
+          {tc('learnMore')}
+          <motion.span animate={{ rotate: isExpanded ? 90 : 0 }} transition={{ duration: 0.2 }}>
             <ChevronRight className="h-4 w-4 ml-1" />
           </motion.span>
         </Button>
@@ -189,7 +170,7 @@ function FeaturedProjectCard({
           {isExpanded && (
             <motion.div
               initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
+              animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3 }}
               className="overflow-hidden"
@@ -201,19 +182,13 @@ function FeaturedProjectCard({
 
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
-                    <h4 className="text-sm font-medium mb-2">
-                      {t("details.role")}
-                    </h4>
-                    <p className="text-sm text-muted-foreground">
-                      {t(`items.${project.id}.role`)}
-                    </p>
+                    <h4 className="text-sm font-medium mb-2">{t('details.role')}</h4>
+                    <p className="text-sm text-muted-foreground">{t(`items.${project.id}.role`)}</p>
                   </div>
                   <div>
-                    <h4 className="text-sm font-medium mb-2">
-                      {t("details.highlights")}
-                    </h4>
+                    <h4 className="text-sm font-medium mb-2">{t('details.highlights')}</h4>
                     <ul className="space-y-1">
-                      {highlights.map((i) => (
+                      {highlights.map(i => (
                         <li
                           key={i}
                           className="text-sm text-muted-foreground flex items-start gap-2"
@@ -234,13 +209,9 @@ function FeaturedProjectCard({
         <div className="flex gap-3 mt-4">
           {project.github && (
             <Button variant="outline" size="sm" asChild>
-              <a
-                href={project.github}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
+              <a href={project.github} target="_blank" rel="noopener noreferrer">
                 <Github className="h-4 w-4 mr-2" />
-                {tc("viewCode")}
+                {tc('viewCode')}
               </a>
             </Button>
           )}
@@ -248,7 +219,7 @@ function FeaturedProjectCard({
             <Button size="sm" asChild>
               <a href={project.live} target="_blank" rel="noopener noreferrer">
                 <ExternalLink className="h-4 w-4 mr-2" />
-                {tc("viewProject")}
+                {tc('viewProject')}
               </a>
             </Button>
           )}
@@ -271,7 +242,7 @@ function ProjectCard({
     <motion.div
       className="glass rounded-xl p-6 h-full flex flex-col"
       whileHover={{ y: -4 }}
-      transition={{ type: "spring", stiffness: 400, damping: 30 }}
+      transition={{ type: 'spring', stiffness: 400, damping: 30 }}
     >
       <div className="flex items-center justify-between mb-3">
         <Badge variant="outline" className="text-xs capitalize">
@@ -280,15 +251,13 @@ function ProjectCard({
         <span className="text-xs text-muted-foreground">{project.year}</span>
       </div>
 
-      <h3 className="text-lg font-semibold mb-2">
-        {t(`items.${project.id}.title`)}
-      </h3>
+      <h3 className="text-lg font-semibold mb-2">{t(`items.${project.id}.title`)}</h3>
       <p className="text-sm text-muted-foreground mb-4 grow">
         {t(`items.${project.id}.description`)}
       </p>
 
       <div className="flex flex-wrap gap-1.5 mb-4">
-        {project.technologies.slice(0, 4).map((tech) => (
+        {project.technologies.slice(0, 4).map(tech => (
           <Badge key={tech} variant="secondary" className="text-xs">
             {tech}
           </Badge>

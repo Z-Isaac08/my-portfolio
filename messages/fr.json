@@ -17,8 +17,8 @@
   "hero": {
     "greeting": "Bonjour, je suis",
     "name": "Isaac N'CHO",
-    "title": "Ingénieur Logiciel & Passionné de Cybersécurité et IA",
-    "description": "Je crée des applications sécurisées et évolutives à l'intersection de l'ingénierie logicielle, de la cybersécurité et de l'IA. Actuellement étudiant à l'ESATIC, je développe des solutions qui comptent.",
+    "title": "Étudiant en Master Cybersécurité & IA | Développeur Full-stack",
+    "description": "Fusionner l'ingénierie logicielle, la cybersécurité et l'IA pour bâtir l'avenir numérique. Actuellement en Master à l'ESATIC, je conçois des solutions innovantes et sécurisées.",
     "cta": {
       "projects": "Découvrir Mes Projets",
       "contact": "Me Contacter"
@@ -56,10 +56,10 @@
       ]
     },
     "currently": {
-      "title": "Actuellement",
-      "learning": "J'apprends : Cache Redis, orchestration Docker, tests de pénétration avancés",
-      "building": "Je construis : Des applications de qualité production avec la sécurité au cœur",
-      "exploring": "J'explore : Solutions de sécurité pilotées par l'IA et détection des menaces"
+      "title": "En ce moment",
+      "learning": "Apprentissage : Architectures Zero Trust, Modèles d'IA (LLMs) & Développement Web Avancé",
+      "building": "Développement : Solutions logicielles robustes intégrant sécurité et intelligence",
+      "exploring": "Exploration : L'intersection du Cloud Security, du DevOps et de l'IA appliquée"
     }
   },
   "projects": {
@@ -72,7 +72,8 @@
       "web": "Web",
       "mobile": "Mobile",
       "ai": "IA/ML",
-      "security": "Sécurité"
+      "security": "Sécurité",
+      "network": "Réseau"
     },
     "details": {
       "role": "Rôle",
@@ -112,9 +113,10 @@
         "role": "Développeur Full-Stack",
         "highlights": [
           "Synchronisation de données temps réel avec Firebase Realtime Database",
-          "Catégorisation automatisée des dépenses par reconnaissance de motifs",
           "Tableaux de bord interactifs avec analyses de dépenses",
-          "Support PWA pour fonctionnalité hors ligne"
+          "Génération de rapports financiers mensuels",
+          "Notification intelligente pour les évènements importants",
+          "Chatbot en tant qu'assistant financier pour répondre aux questions des utilisateurs"
         ]
       },
 
@@ -132,8 +134,8 @@
       },
       "industry-4": {
         "title": "Industrie 4.0 - IA Bétail",
-        "description": "Optimisation du bétail pilotée par l'IA pour l'agriculture durable",
-        "longDescription": "Une solution IA innovante pour la gestion du bétail qui exploite le machine learning pour optimiser les calendriers d'alimentation, le suivi de santé et l'allocation des ressources pour des pratiques agricoles durables.",
+        "description": "Optimisation du bétail pilotée par l'IA pour l'élevage",
+        "longDescription": "Une solution IA innovante pour la gestion du bétail qui exploite le machine learning pour optimiser les calendriers d'alimentation, le suivi de santé et l'allocation des ressources pour des pratiques d'élevage durables.",
         "role": "Team Lead & Développeur IA",
         "highlights": [
           "Direction d'une équipe de 4 développeurs en méthodologie agile",
@@ -152,6 +154,18 @@
           "Versionnage de documents et suivi des modifications",
           "Système de contrôle d'accès basé sur les rôles",
           "API RESTful avec documentation complète"
+        ]
+      },
+      "networking-lab": {
+        "title": "Lab Réseau - DHCPv4 & SLAAC IPv6",
+        "description": "Analyse comparative des mécanismes d'adressage IPv4 et IPv6",
+        "longDescription": "Un laboratoire réseau complet simulant et comparant les mécanismes DHCPv4 (Stateful) et SLAAC IPv6 (Stateless) dans un environnement virtualisé. Comprend une analyse approfondie des paquets pour observer les transitions de protocole et les implications de sécurité.",
+        "role": "Analyste en Sécurité Réseau",
+        "highlights": [
+          "Simulation des mécanismes DHCPv4 Stateful et SLAAC IPv6 Stateless",
+          "Analyse de paquets approfondie avec Wireshark et tshark",
+          "Étude de la transition d'ARP vers Neighbor Discovery Protocol (NDP)",
+          "Documentation des extensions de confidentialité IPv6 et du Multicast"
         ]
       }
     }

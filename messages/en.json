@@ -17,8 +17,8 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Isaac N'CHO",
-    "title": "Software Engineer & Cybersecurity and AI enthusiast",
-    "description": "Building secure, scalable applications at the intersection of software engineering, cybersecurity, and AI. Currently pursuing my degree at ESATIC while crafting solutions that matter.",
+    "title": "Master's Student in Cybersecurity & AI | Full-stack Developer",
+    "description": "Merging software engineering, cybersecurity, and AI to build the digital future. Currently pursuing my Master's at ESATIC while crafting innovative and secure solutions.",
     "cta": {
       "projects": "Explore My Work",
       "contact": "Let's Connect"
@@ -57,9 +57,9 @@
     },
     "currently": {
       "title": "Currently",
-      "learning": "Learning: Redis caching, Docker orchestration, advanced penetration testing",
-      "building": "Building: Production-grade applications with security at their core",
-      "exploring": "Exploring: AI-driven security solutions and threat detection"
+      "learning": "Learning: Zero Trust Architectures, AI Models (LLMs) & Advanced Web Development",
+      "building": "Building: Robust software solutions integrating security and intelligence",
+      "exploring": "Exploring: The intersection of Cloud Security, DevOps, and applied AI"
     }
   },
   "projects": {
@@ -72,7 +72,8 @@
       "web": "Web",
       "mobile": "Mobile",
       "ai": "AI/ML",
-      "security": "Security"
+      "security": "Security",
+      "network": "Network"
     },
     "details": {
       "role": "Role",
@@ -112,9 +113,10 @@
         "role": "Full-Stack Developer",
         "highlights": [
           "Real-time data synchronization with Firebase Realtime Database",
-          "Automated expense categorization using pattern matching",
           "Interactive dashboards with spending analytics",
-          "PWA support for offline functionality"
+          "Generation of monthly financial reports",
+          "Smart notifications for important events",
+          "Chatbot as a financial assistant to answer user questions"
         ]
       },
 
@@ -152,6 +154,18 @@
           "Document versioning and change tracking",
           "Role-based access control system",
           "RESTful API with comprehensive documentation"
+        ]
+      },
+      "networking-lab": {
+        "title": "Networking Lab - DHCPv4 & SLAAC IPv6",
+        "description": "Comparative analysis of IPv4 and IPv6 addressing mechanisms",
+        "longDescription": "A comprehensive networking lab simulating and comparing stateful DHCPv4 and stateless SLAAC IPv6 mechanisms in a virtualized environment. Features deep packet analysis to observe protocol transitions and security implications.",
+        "role": "Network Security Analyst",
+        "highlights": [
+          "Simulated DHCPv4 Stateful and SLAAC IPv6 Stateless mechanisms",
+          "Deep packet analysis with Wireshark and tshark",
+          "Analyzed transition from ARP to Neighbor Discovery Protocol (NDP)",
+          "Documented IPv6 Privacy Extensions and Multicast transitions"
         ]
       }
     }
