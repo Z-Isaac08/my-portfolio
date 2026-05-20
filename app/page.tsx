@@ -9,12 +9,16 @@ import {
   Projects,
   Skills,
 } from '@/components/sections';
+import { AmbientGlow } from '@/components/ambient-glow';
 
 export default function Home() {
   return (
     <>
       <Navigation />
-      <main className="relative">
+      <main className="relative overflow-hidden">
+        {/* Global animated Aurora & Cyber Grid background */}
+        <AmbientGlow />
+        
         <Hero />
         <About />
         <Projects />

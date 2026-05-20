@@ -7,8 +7,6 @@ import {
 } from "@/components/section-container";
 import { motion } from "framer-motion";
 import {
-  BookOpen,
-  Code2,
   Compass,
   Shield,
   Sparkles,
@@ -26,7 +24,7 @@ export function About() {
   const t = useTranslations("about");
 
   return (
-    <SectionContainer id="about" className="gradient-bg">
+    <SectionContainer id="about" className="bg-transparent">
       <MotionSection>
         <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
@@ -59,46 +57,11 @@ export function About() {
                 {t("philosophy.content")}
               </p>
             </motion.div>
-
-            {/* Currently working on */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-y-4"
-            >
-              <h3 className="text-lg font-semibold flex items-center gap-2">
-                <Code2 className="h-5 w-5 text-primary" />
-                {t("currently.title")}
-              </h3>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="text-muted-foreground text-sm">
-                    {t("currently.learning")}
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="text-muted-foreground text-sm">
-                    {t("currently.building")}
-                  </span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
-                  <span className="text-muted-foreground text-sm">
-                    {t("currently.exploring")}
-                  </span>
-                </li>
-              </ul>
-            </motion.div>
           </div>
 
           {/* Right column - Approach cards */}
           <div>
-            <h3 className="text-lg font-semibold mb-6 flex items-center gap-2">
-              <BookOpen className="h-5 w-5 text-primary" />
+            <h3 className="text-lg font-semibold mb-6">
               {t("approach.title")}
             </h3>
             <MotionStagger className="space-y-4">

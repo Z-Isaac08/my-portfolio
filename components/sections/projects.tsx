@@ -125,7 +125,7 @@ function FeaturedProjectCard({
   return (
     <motion.div
       layout
-      className="glass rounded-2xl overflow-hidden"
+      className="glass rounded-2xl overflow-hidden border border-border/40 transition-all duration-300 hover:border-indigo-500/35 hover:shadow-[0_0_30px_rgba(99,102,241,0.15)]"
       whileHover={{ y: -2 }}
       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
     >
@@ -240,7 +240,7 @@ function ProjectCard({
 }) {
   return (
     <motion.div
-      className="glass rounded-xl p-6 h-full flex flex-col"
+      className="glass rounded-xl p-6 h-full flex flex-col border border-border/40 transition-all duration-300 hover:border-indigo-500/35 hover:shadow-[0_0_25px_rgba(99,102,241,0.12)]"
       whileHover={{ y: -4 }}
       transition={{ type: 'spring', stiffness: 400, damping: 30 }}
     >

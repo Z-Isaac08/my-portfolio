@@ -18,8 +18,13 @@
   "hero": {
     "greeting": "Hello, I'm",
     "name": "Isaac N'CHO",
-    "title": "Master's Student in Cybersecurity & AI | Full-stack Developer",
-    "description": "Merging software engineering, cybersecurity, and AI to build the digital future. Currently pursuing my Master's at ESATIC while crafting innovative and secure solutions.",
+    "titles": [
+      "Cybersecurity & AI Student",
+      "Fullstack Developer",
+      "Security Labs & CTF Enthusiast (HTB / THM)",
+      "Data Science & ML Apprentice"
+    ],
+    "description": "Crafting intelligent, secure-by-design, and user-centric digital solutions.",
     "cta": {
       "projects": "Explore My Work",
       "contact": "Let's Connect"
@@ -55,12 +60,6 @@
           "description": "The tech landscape evolves daily. So do I."
         }
       ]
-    },
-    "currently": {
-      "title": "Currently",
-      "learning": "Learning: Zero Trust Architectures, AI Models (LLMs) & Advanced Web Development",
-      "building": "Building: Robust software solutions integrating security and intelligence",
-      "exploring": "Exploring: The intersection of Cloud Security, DevOps, and applied AI"
     }
   },
   "projects": {

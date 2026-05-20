@@ -11,7 +11,7 @@ export function Skills() {
   const t = useTranslations('skills');
 
   return (
-    <SectionContainer id="skills" className="gradient-bg">
+    <SectionContainer id="skills" className="bg-transparent">
       <MotionSection>
         <SectionHeader title={t('title')} subtitle={t('subtitle')} />
 

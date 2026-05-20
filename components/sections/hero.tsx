@@ -1,11 +1,80 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { StarField } from "@/components/star-field";
 import { Button } from "@/components/ui/button";
 import { heroStats, siteConfig } from "@/lib/data";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
 import { useTranslations } from "next-intl";
+
+function Typewriter({ words, speed = 75, eraseSpeed = 35, delay = 3000 }: { words: string[]; speed?: number; eraseSpeed?: number; delay?: number }) {
+  const [wordIndex, setWordIndex] = useState(0);
+  const [displayedText, setDisplayedText] = useState("");
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  // Reset typewriter state when the words list changes (e.g. language toggle)
+  useEffect(() => {
+    setWordIndex(0);
+    setDisplayedText("");
+    setIsDeleting(false);
+  }, [words]);
+
+  useEffect(() => {
+    let isMounted = true;
+    const currentWord = words[wordIndex] || "";
+
+    const tick = () => {
+      if (!isMounted) return;
+
+      if (isDeleting) {
+        // Deleting character
+        setDisplayedText((prev) => {
+          if (prev.length > 0) {
+            return prev.slice(0, -1);
+          }
+          return "";
+        });
+      } else {
+        // Typing character
+        setDisplayedText((prev) => {
+          if (prev.length < currentWord.length) {
+            return currentWord.slice(0, prev.length + 1);
+          }
+          return prev;
+        });
+      }
+    };
+
+    let timer: NodeJS.Timeout;
+
+    if (!isDeleting && displayedText === currentWord) {
+      // Pause when full word is typed
+      timer = setTimeout(() => {
+        if (isMounted) setIsDeleting(true);
+      }, delay);
+    } else if (isDeleting && displayedText === "") {
+      // Finished deleting, move to next word
+      setIsDeleting(false);
+      setWordIndex((prev) => (prev + 1) % words.length);
+    } else {
+      // Continue typing or deleting
+      timer = setTimeout(tick, isDeleting ? eraseSpeed : speed);
+    }
+
+    return () => {
+      isMounted = false;
+      clearTimeout(timer);
+    };
+  }, [displayedText, isDeleting, wordIndex, words, speed, eraseSpeed, delay]);
+
+  return (
+    <span className="inline-flex items-center justify-center">
+      <span>{displayedText}</span>
+      <span className="ml-1 inline-block w-[3px] h-[1.15em] bg-primary animate-pulse" style={{ verticalAlign: "middle" }} />
+    </span>
+  );
+}
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -68,15 +137,15 @@ export function Hero() {
           {t("name")}
         </motion.h1>
 
-        {/* Title */}
-        <motion.p
+        {/* Title with typewriter effect */}
+        <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="text-xl sm:text-2xl lg:text-3xl text-muted-foreground font-medium mb-6"
+          className="text-lg sm:text-xl lg:text-2xl text-muted-foreground font-medium mb-6 min-h-[1.5em] flex items-center justify-center"
         >
-          {t("title")}
-        </motion.p>
+          <Typewriter words={t.raw("titles")} />
+        </motion.div>
 
         {/* Description */}
         <motion.p

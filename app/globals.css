@@ -269,6 +269,29 @@
   .focus-ring {
     @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
   }
+
+  /* Cyber Grid utility */
+  .bg-grid {
+    background-size: 50px 50px;
+    background-image: 
+      linear-gradient(to right, var(--glass-border) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--glass-border) 1px, transparent 1px);
+  }
+
+
+
+  /* Floating aurora animations */
+  .animate-float-slow {
+    animation: float-slow 16s ease-in-out infinite;
+  }
+  
+  .animate-float-medium {
+    animation: float-medium 11s ease-in-out infinite;
+  }
+  
+  .animate-float-slower {
+    animation: float-slower 22s ease-in-out infinite;
+  }
 }
 
 @keyframes float {
@@ -277,6 +300,39 @@
   }
   50% {
     transform: translateY(-10px);
+  }
+}
+
+@keyframes float-slow {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(50px, -70px) scale(1.2);
+  }
+  66% {
+    transform: translate(-40px, 40px) scale(0.85);
+  }
+}
+
+@keyframes float-medium {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-60px, 60px) scale(0.8);
+  }
+}
+
+@keyframes float-slower {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1.15);
+  }
+  40% {
+    transform: translate(60px, 50px) scale(0.9);
+  }
+  70% {
+    transform: translate(-30px, -60px) scale(1.05);
   }
 }
 

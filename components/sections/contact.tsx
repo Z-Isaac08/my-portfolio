@@ -72,7 +72,7 @@ export function Contact() {
   ];
 
   return (
-    <SectionContainer id="contact" className="gradient-bg">
+    <SectionContainer id="contact" className="bg-transparent">
       <MotionSection>
         <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 

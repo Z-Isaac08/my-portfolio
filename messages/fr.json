@@ -18,8 +18,13 @@
   "hero": {
     "greeting": "Bonjour, je suis",
     "name": "Isaac N'CHO",
-    "title": "Étudiant en Master Cybersécurité & IA | Développeur Full-stack",
-    "description": "Fusionner l'ingénierie logicielle, la cybersécurité et l'IA pour bâtir l'avenir numérique. Actuellement en Master à l'ESATIC, je conçois des solutions innovantes et sécurisées.",
+    "titles": [
+      "Étudiant en Cybersécurité & IA",
+      "Développeur Fullstack",
+      "Passionné de Labs Cyber (HTB / THM)",
+      "Apprenti en Machine Learning & Data"
+    ],
+    "description": "Créer des solutions numériques intelligentes, sécurisées par design et centrées sur l'utilisateur.",
     "cta": {
       "projects": "Découvrir Mes Projets",
       "contact": "Me Contacter"
@@ -55,12 +60,6 @@
           "description": "Le paysage technologique évolue quotidiennement. Moi aussi."
         }
       ]
-    },
-    "currently": {
-      "title": "En ce moment",
-      "learning": "Apprentissage : Architectures Zero Trust, Modèles d'IA (LLMs) & Développement Web Avancé",
-      "building": "Développement : Solutions logicielles robustes intégrant sécurité et intelligence",
-      "exploring": "Exploration : L'intersection du Cloud Security, du DevOps et de l'IA appliquée"
     }
   },
   "projects": {
