@@ -10,7 +10,7 @@ import { ChevronRight, ExternalLink, Github, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 
-const categories = ['all', 'web', 'mobile', 'ai', 'security', 'network'] as const;
+const categories = ['all', 'web', 'ai', 'security', 'network'] as const;
 
 export function Projects() {
   const t = useTranslations('projects');

@@ -4,10 +4,11 @@ import {
   Footer,
   Hero,
   Journey,
+  Knowledge,
   Navigation,
   Projects,
   Skills,
-} from "@/components/sections";
+} from '@/components/sections';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         <Hero />
         <About />
         <Projects />
+        <Knowledge />
         <Skills />
         <Journey />
         <Contact />

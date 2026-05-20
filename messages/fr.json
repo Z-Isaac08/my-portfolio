@@ -10,6 +10,7 @@
   "nav": {
     "about": "À Propos",
     "projects": "Projets",
+    "knowledge": "Connaissances",
     "skills": "Compétences",
     "journey": "Parcours",
     "contact": "Contact"
@@ -70,7 +71,6 @@
     "categories": {
       "all": "Tous",
       "web": "Web",
-      "mobile": "Mobile",
       "ai": "IA/ML",
       "security": "Sécurité",
       "network": "Réseau"
@@ -119,19 +119,6 @@
           "Chatbot en tant qu'assistant financier pour répondre aux questions des utilisateurs"
         ]
       },
-
-      "ace-app": {
-        "title": "ACE_APP",
-        "description": "Gestion intelligente des présences pour établissements scolaires",
-        "longDescription": "Une solution de suivi des présences mobile-first conçue pour les écoles et universités. Construite avec Flutter pour un déploiement multiplateforme, avec support hors ligne et reporting intelligent.",
-        "role": "Développeur Mobile",
-        "highlights": [
-          "Support multiplateforme iOS et Android avec Flutter",
-          "Architecture offline-first avec stockage local SQLite",
-          "Rapports de présence automatisés et analyses",
-          "Système d'émargement par QR code"
-        ]
-      },
       "industry-4": {
         "title": "Industrie 4.0 - IA Bétail",
         "description": "Optimisation du bétail pilotée par l'IA pour l'élevage",
@@ -167,12 +154,86 @@
           "Étude de la transition d'ARP vers Neighbor Discovery Protocol (NDP)",
           "Documentation des extensions de confidentialité IPv6 et du Multicast"
         ]
+      },
+      "linux-adds": {
+        "title": "Services d'Infrastructure Linux (ADDS)",
+        "description": "Déploiement de services d'authentification centralisée sur Debian",
+        "longDescription": "Une infrastructure de niveau entreprise simulant un environnement Active Directory sous Linux. Comprend la gestion centralisée des identités avec OpenLDAP, l'authentification unifiée via SSSD, des services DNS/DHCP intégrés et une stratégie de sauvegarde automatisée.",
+        "role": "Administrateur Système",
+        "highlights": [
+          "Déploiement d'un annuaire LDAP centralisé",
+          "Configuration de l'authentification unifiée avec SSSD",
+          "Gestion intégrée des services DNS et DHCP",
+          "Mise en place d'une stratégie de backup automatisée"
+        ]
+      },
+      "pl-inference": {
+        "title": "Inférence de Performance PL",
+        "description": "Analyse inférentielle des facteurs déterminant les résultats en Premier League",
+        "longDescription": "Projet d'analyse statistique utilisant la régression logistique multinomiale pour quantifier l'influence d'indicateurs techniques (Efficacité, Niveau, Discipline) sur les résultats de matchs.",
+        "role": "Data Scientist",
+        "highlights": [
+          "Modèle de Régression Logistique avec précision de 57.85%",
+          "Quantification de l'impact de l'efficacité sur la probabilité de victoire",
+          "Tests de significativité via P-values et Odds Ratios",
+          "Nettoyage et ingénierie de caractéristiques sur des données sportives"
+        ]
+      },
+      "wine-analysis": {
+        "title": "Analyse des Ventes de Vin",
+        "description": "Rapprochement de données et analyse de performance pour un marchand de vins",
+        "longDescription": "Transformation digitale via le rapprochement de données ERP/CMS, détection d'outliers et segmentation de produits par clustering.",
+        "role": "Data Analyst",
+        "highlights": [
+          "Rapprochement de sources de données ERP et Web déconnectées",
+          "Détection d'aberrations de prix via Z-score et IQR",
+          "Segmentation de produits via Clustering K-Means",
+          "Modélisation des relations prix-ventes par Régression Linéaire"
+        ]
       }
     }
   },
+  "knowledge": {
+    "title": "Base de Connaissances Technique",
+    "subtitle": "Explorations approfondies de la sécurité, l'infrastructure et les techniques offensives",
+    "description": "ZNote est mon blog technique où je documente des laboratoires pratiques, des writeups CTF, des rapports de pentest et des analyses approfondies d'infrastructure. Apprentissage continu par l'expérimentation pratique.",
+    "categories": {
+      "ctf": "CTF & Challenges",
+      "pentest": "Labs Pentest",
+      "network": "Infrastructure Réseau",
+      "tutorials": "Explorations Techniques"
+    },
+    "cta": "Découvrir ZNote"
+  },
   "skills": {
     "title": "Expertise Technique",
-    "subtitle": "Des compétences affinées à travers des projets et un apprentissage continu"
+    "subtitle": "Des compétences affinées à travers des projets et un apprentissage continu",
+    "categories": {
+      "frontend": {
+        "title": "Ingénierie Frontend",
+        "description": "Construire des interfaces utilisateur réactives, accessibles et performantes"
+      },
+      "backend": {
+        "title": "Développement Backend",
+        "description": "APIs scalables et architectures serveur robustes"
+      },
+      "security": {
+        "title": "Cybersécurité",
+        "description": "Pratiques de développement sécurisé et évaluation des vulnérabilités"
+      },
+      "tools": {
+        "title": "Outils & Méthodes",
+        "description": "Outils de développement, systèmes de design et workflows collaboratifs"
+      },
+      "systems": {
+        "title": "Systèmes & Infrastructure",
+        "description": "Infrastructure réseau, virtualisation et administration système"
+      },
+      "data": {
+        "title": "Données & Machine Learning",
+        "description": "Analyse de données, modélisation statistique et solutions d'apprentissage automatique"
+      }
+    }
   },
   "journey": {
     "title": "Mon Parcours",
@@ -196,7 +257,7 @@
       },
       "akiba-internship": {
         "title": "Stagiaire Développeur Web Fullstack",
-        "organization": "Akiba Solution",
+        "organization": "Coreline",
         "period": "Mars 2025 - Septembre 2025",
         "description": "Conception et développement d'AkibaHub, une plateforme de veille économique pour le secteur agroalimentaire ivoirien, combinant collecte automatisée des données et visualisation dynamique des indicateurs économiques.",
         "achievements": [

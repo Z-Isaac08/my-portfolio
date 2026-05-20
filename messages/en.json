@@ -10,6 +10,7 @@
   "nav": {
     "about": "About",
     "projects": "Projects",
+    "knowledge": "Knowledge",
     "skills": "Skills",
     "journey": "Journey",
     "contact": "Contact"
@@ -70,7 +71,6 @@
     "categories": {
       "all": "All",
       "web": "Web",
-      "mobile": "Mobile",
       "ai": "AI/ML",
       "security": "Security",
       "network": "Network"
@@ -119,19 +119,6 @@
           "Chatbot as a financial assistant to answer user questions"
         ]
       },
-
-      "ace-app": {
-        "title": "ACE_APP",
-        "description": "Smart attendance management for educational institutions",
-        "longDescription": "A mobile-first attendance tracking solution designed for schools and universities. Built with Flutter for cross-platform deployment, featuring offline support and intelligent reporting.",
-        "role": "Mobile Developer",
-        "highlights": [
-          "Cross-platform iOS and Android support with Flutter",
-          "Offline-first architecture with local SQLite storage",
-          "Automated attendance reports and analytics",
-          "QR code-based check-in system"
-        ]
-      },
       "industry-4": {
         "title": "Industry 4.0 - Livestock AI",
         "description": "AI-driven livestock optimization for sustainable farming",
@@ -167,12 +154,86 @@
           "Analyzed transition from ARP to Neighbor Discovery Protocol (NDP)",
           "Documented IPv6 Privacy Extensions and Multicast transitions"
         ]
+      },
+      "linux-adds": {
+        "title": "Linux Infrastructure Services (ADDS)",
+        "description": "Centralized authentication and network services deployment on Debian",
+        "longDescription": "A robust enterprise-grade infrastructure deployment featuring an Active Directory-like environment on Linux. Includes centralized authentication with OpenLDAP and SSSD, integrated DNS/DHCP services, and a comprehensive backup strategy.",
+        "role": "System Administrator",
+        "highlights": [
+          "Implemented centralized identity management with OpenLDAP",
+          "Configured unified authentication using SSSD",
+          "Deployed integrated DNS and DHCP services",
+          "Designed and implemented an automated backup strategy"
+        ]
+      },
+      "pl-inference": {
+        "title": "Premier League Performance Inference",
+        "description": "Inferential analysis of factors determining football match results",
+        "longDescription": "Statistical analysis project using Multinomial Logistic Regression to understand factors influencing PL match outcomes, focusing on efficiency, level, and discipline.",
+        "role": "Data Scientist",
+        "highlights": [
+          "Built Multinomial Logistic Regression model with 57.85% accuracy",
+          "Quantified impact of efficiency on victory probability",
+          "Conducted significance tests using P-values and Odds Ratios",
+          "Data cleaning and feature engineering on 2019-2025 sports data"
+        ]
+      },
+      "wine-analysis": {
+        "title": "Wine Sales Data Analysis",
+        "description": "Data reconciliation and sales performance analysis for a wine merchant",
+        "longDescription": "Infrastructure transformation through ERP/CMS data reconciliation, outlier detection, and product segmentation.",
+        "role": "Data Analyst",
+        "highlights": [
+          "Reconciled disconnected ERP and CMS datasets",
+          "Detected price outliers using Z-score and IQR methods",
+          "Segmented product profiles using K-Means Clustering",
+          "Modeled price-sales relationships via Linear Regression"
+        ]
       }
     }
   },
+  "knowledge": {
+    "title": "Technical Knowledge Base",
+    "subtitle": "In-depth explorations of security, infrastructure, and offensive techniques",
+    "description": "ZNote is my technical blog where I document hands-on labs, CTF writeups, pentest reports, and infrastructure deep dives. Continuous learning through practical experimentation.",
+    "categories": {
+      "ctf": "CTF & Challenges",
+      "pentest": "Pentest Labs",
+      "network": "Network Infrastructure",
+      "tutorials": "Deep Dives"
+    },
+    "cta": "Explore ZNote"
+  },
   "skills": {
     "title": "Technical Expertise",
-    "subtitle": "Capabilities honed through projects and continuous learning"
+    "subtitle": "Capabilities honed through projects and continuous learning",
+    "categories": {
+      "frontend": {
+        "title": "Frontend Engineering",
+        "description": "Building responsive, accessible, and performant user interfaces"
+      },
+      "backend": {
+        "title": "Backend Development",
+        "description": "Scalable APIs and robust server-side architectures"
+      },
+      "security": {
+        "title": "Cybersecurity",
+        "description": "Secure development practices and vulnerability assessment"
+      },
+      "tools": {
+        "title": "Tools & Methods",
+        "description": "Development tools, design systems, and collaborative workflows"
+      },
+      "systems": {
+        "title": "Systems & Infrastructure",
+        "description": "Network infrastructure, virtualization, and system administration"
+      },
+      "data": {
+        "title": "Data & Machine Learning",
+        "description": "Data analysis, statistical modeling, and machine learning solutions"
+      }
+    }
   },
   "journey": {
     "title": "My Journey",
@@ -196,7 +257,7 @@
       },
       "akiba-internship": {
         "title": "Fullstack Web Developer Intern",
-        "organization": "Akiba Solution",
+        "organization": "Coreline",
         "period": "March 2025 - September 2025",
         "description": "Designed and developed AkibaHub, an economic intelligence platform for the Ivorian agri-food sector, combining automated data collection and dynamic visualization of economic indicators.",
         "achievements": [

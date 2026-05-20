@@ -1,4 +1,4 @@
-import { Brain, Cloud, Code2, Database, Shield, Smartphone, type LucideIcon } from 'lucide-react';
+import { Brain, Code2, Database, Server, Shield, Wrench, type LucideIcon } from 'lucide-react';
 
 export interface Project {
   id: string;
@@ -6,7 +6,7 @@ export interface Project {
   description: string;
   longDescription: string;
   technologies: string[];
-  category: 'web' | 'mobile' | 'ai' | 'security' | 'network';
+  category: 'web' | 'ai' | 'security' | 'network';
   image?: string;
   github?: string;
   live?: string;
@@ -94,7 +94,7 @@ export const projects: Project[] = [
       'A comprehensive expense management solution built with ReactJS and Firebase. Features real-time synchronization across devices, automated expense categorization, and insightful financial analytics.',
     technologies: ['React', 'Firebase', 'Tailwind CSS', 'Chart.js'],
     category: 'web',
-    github: 'https://github.com/Z-Isaac08/X_Pense_Mobile',
+    github: 'https://github.com/Z-Isaac08/X-PENSE-APP',
     live: 'https://x-pense-app.vercel.app',
     featured: true,
     year: '2024',
@@ -104,25 +104,6 @@ export const projects: Project[] = [
       'Automated expense categorization using pattern matching',
       'Interactive dashboards with spending analytics',
       'PWA support for offline functionality',
-    ],
-  },
-  {
-    id: 'ace-app',
-    title: 'ACE_APP',
-    description: 'Smart attendance management for educational institutions',
-    longDescription:
-      'A mobile-first attendance tracking solution designed for schools and universities. Built with Flutter for cross-platform deployment, featuring offline support and intelligent reporting.',
-    technologies: ['Flutter', 'Dart', 'SQLite', 'Drift'],
-    category: 'mobile',
-    github: 'https://github.com/Z-Isaac08/ACE_APP',
-    featured: true,
-    year: '2024',
-    role: 'Mobile Developer',
-    highlights: [
-      'Cross-platform iOS and Android support with Flutter',
-      'Offline-first architecture with local SQLite storage',
-      'Automated attendance reports and analytics',
-      'QR code-based check-in system',
     ],
   },
   {
@@ -144,25 +125,6 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 'e-docs',
-    title: 'E-Docs',
-    description: 'Digital library and documentation management system',
-    longDescription:
-      'A modern documentation platform designed for educational institutions, featuring advanced search capabilities, version control, and collaborative editing features.',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Elasticsearch'],
-    category: 'web',
-    github: 'https://github.com/Z-Isaac08/E-Docs',
-    featured: false,
-    year: '2023',
-    role: 'Full-Stack Developer',
-    highlights: [
-      'Full-text search with Elasticsearch integration',
-      'Document versioning and change tracking',
-      'Role-based access control system',
-      'RESTful API with comprehensive documentation',
-    ],
-  },
-  {
     id: 'networking-lab',
     title: 'Networking Lab - DHCPv4 & SLAAC IPv6',
     description: 'Comparative analysis of IPv4 and IPv6 addressing mechanisms',
@@ -181,9 +143,95 @@ export const projects: Project[] = [
       'Documented IPv6 Privacy Extensions and Multicast transitions',
     ],
   },
+  {
+    id: 'linux-adds',
+    title: 'Linux Infrastructure Services (ADDS)',
+    description: 'Centralized authentication and network services deployment on Debian',
+    longDescription:
+      'A robust enterprise-grade infrastructure deployment featuring an Active Directory-like environment on Linux. Includes centralized authentication with OpenLDAP and SSSD, integrated DNS/DHCP services, and a comprehensive backup strategy.',
+    technologies: ['Debian', 'OpenLDAP', 'SSSD', 'DNS', 'DHCP', 'VMWare'],
+    category: 'network',
+    featured: true,
+    year: '2026',
+    role: 'System Administrator',
+    highlights: [
+      'Implemented centralized identity management with OpenLDAP',
+      'Configured unified authentication using SSSD',
+      'Deployed integrated DNS and DHCP services',
+      'Designed and implemented an automated backup strategy',
+    ],
+  },
+  {
+    id: 'pl-inference',
+    title: 'Premier League Performance Inference',
+    description: 'Inferential analysis of factors determining football match results',
+    longDescription:
+      'Statistical analysis project using Multinomial Logistic Regression to understand factors influencing PL match outcomes, focusing on efficiency, level, and discipline.',
+    technologies: ['Python', 'Pandas', 'Scikit-learn', 'Logistic Regression'],
+    category: 'ai',
+    github: 'https://github.com/Z-Isaac08/PL-Performance-Inference',
+    featured: true,
+    year: '2026',
+    role: 'Data Scientist',
+    highlights: [
+      'Built Multinomial Logistic Regression model with 57.85% accuracy',
+      'Quantified impact of efficiency on victory probability',
+      'Conducted significance tests using P-values and Odds Ratios',
+      'Data cleaning and feature engineering on 2019-2025 sports data',
+    ],
+  },
+  {
+    id: 'wine-analysis',
+    title: 'Wine Sales Data Analysis',
+    description: 'Data reconciliation and sales performance analysis for a wine merchant',
+    longDescription:
+      'Infrastructure transformation through ERP/CMS data reconciliation, outlier detection, and product segmentation.',
+    technologies: ['Python', 'Pandas', 'Matplotlib', 'K-Means', 'Linear Regression'],
+    category: 'ai',
+    github: 'https://github.com/Z-Isaac08/wine-sales-analysis',
+    featured: false,
+    year: '2025',
+    role: 'Data Analyst',
+    highlights: [
+      'Reconciled disconnected ERP and CMS datasets',
+      'Detected price outliers using Z-score and IQR methods',
+      'Segmented product profiles using K-Means Clustering',
+      'Modeled price-sales relationships via Linear Regression',
+    ],
+  },
+  {
+    id: 'e-docs',
+    title: 'E-Docs',
+    description: 'Digital library and documentation management system',
+    longDescription:
+      'A modern documentation platform designed for educational institutions, featuring advanced search capabilities, version control, and collaborative editing features.',
+    technologies: ['React', 'Node.js', 'Elasticsearch', 'Docker'],
+    category: 'web',
+    featured: false,
+    year: '2024',
+    role: 'Full-Stack Developer',
+    highlights: [
+      'Full-text search with Elasticsearch integration',
+      'Document versioning and change tracking',
+      'Role-based access control system',
+      'RESTful API with comprehensive documentation',
+    ],
+  },
 ];
 
 export const skillCategories: SkillCategory[] = [
+  {
+    id: 'security',
+    title: 'Cybersecurity',
+    description: 'Secure development practices and vulnerability assessment',
+    icon: Shield,
+    skills: [
+      { name: 'Security Fundamentals', level: 4 },
+      { name: 'OWASP Top 10', level: 4 },
+      { name: 'Secure Coding', level: 4 },
+      { name: 'Network Security', level: 3 },
+    ],
+  },
   {
     id: 'frontend',
     title: 'Frontend Engineering',
@@ -195,18 +243,6 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Tailwind CSS', level: 5 },
       { name: 'Framer Motion', level: 4 },
       { name: 'HTML5 / CSS3', level: 5 },
-    ],
-  },
-  {
-    id: 'mobile',
-    title: 'Mobile Development',
-    description: 'Cross-platform mobile applications with native performance',
-    icon: Smartphone,
-    skills: [
-      { name: 'Flutter / Dart', level: 5 },
-      { name: 'SQLite / Drift', level: 4 },
-      { name: 'State Management', level: 4 },
-      { name: 'Native APIs', level: 3 },
     ],
   },
   {
@@ -223,39 +259,40 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    id: 'security',
-    title: 'Cybersecurity',
-    description: 'Secure development practices and vulnerability assessment',
-    icon: Shield,
+    id: 'systems',
+    title: 'Systems & Infrastructure',
+    description: 'Network infrastructure, virtualization, and system administration',
+    icon: Server,
     skills: [
-      { name: 'Security Fundamentals', level: 4 },
-      { name: 'OWASP Top 10', level: 4 },
-      { name: 'Secure Coding', level: 4 },
-      { name: 'Network Security', level: 3 },
+      { name: 'Virtualization', level: 4 },
+      { name: 'Linux Administration', level: 4 },
+      { name: 'Windows Server', level: 3 },
+      { name: 'Network Design & Configuration', level: 4 },
+      { name: 'Active Directory & Authentication', level: 3 },
     ],
   },
   {
-    id: 'devops',
-    title: 'DevOps & Cloud',
-    description: 'Containerization, CI/CD, and cloud infrastructure',
-    icon: Cloud,
-    skills: [
-      { name: 'Docker', level: 4 },
-      { name: 'Git / GitHub', level: 5 },
-      { name: 'Firebase / Supabase', level: 4 },
-      { name: 'CI/CD Pipelines', level: 3 },
-    ],
-  },
-  {
-    id: 'ai',
-    title: 'AI & Machine Learning',
-    description: 'Practical AI solutions and data-driven applications',
+    id: 'data',
+    title: 'Data & Machine Learning',
+    description: 'Data analysis, statistical modeling, and machine learning solutions',
     icon: Brain,
     skills: [
       { name: 'Python ML Stack', level: 3 },
       { name: 'TensorFlow', level: 3 },
       { name: 'Data Analysis', level: 4 },
-      { name: 'AI Integration', level: 3 },
+      { name: 'Statistical Modeling', level: 4 },
+    ],
+  },
+  {
+    id: 'tools',
+    title: 'Tools & Methods',
+    description: 'Development tools, design systems, and collaborative workflows',
+    icon: Wrench,
+    skills: [
+      { name: 'Git / GitHub', level: 5 },
+      { name: 'Figma', level: 4 },
+      { name: 'Postman / API Testing', level: 4 },
+      { name: 'VS Code / Dev Tools', level: 5 },
     ],
   },
 ];

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from 'next-themes';
+import { useEffect, useRef } from 'react';
 
 interface Star {
   x: number;
@@ -23,7 +23,7 @@ export function StarField() {
     const canvas = canvasRef.current;
     if (!canvas) return;
 
-    const ctx = canvas.getContext("2d");
+    const ctx = canvas.getContext('2d');
     if (!ctx) return;
 
     const resizeCanvas = () => {
@@ -60,26 +60,31 @@ export function StarField() {
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-      const isDark = resolvedTheme === "dark";
-      const color = isDark ? "255, 255, 255" : "0, 0, 0";
+      const isDark = resolvedTheme === 'dark';
+      const color = isDark ? '255, 255, 255' : '0, 0, 0';
+      const time = Date.now() * 0.0003; // Slow animation
 
-      starsRef.current.forEach((star) => {
+      starsRef.current.forEach((star, index) => {
         // Calculate distance from mouse
         const dx = mouseRef.current.x - star.baseX;
         const dy = mouseRef.current.y - star.baseY;
         const distance = Math.sqrt(dx * dx + dy * dy);
         const maxDistance = 150;
 
+        // Subtle floating animation
+        const floatX = Math.sin(time + index * 0.1) * 3;
+        const floatY = Math.cos(time * 0.7 + index * 0.15) * 3;
+
         // Move stars away from mouse
         if (distance < maxDistance) {
           const force = (maxDistance - distance) / maxDistance;
           const angle = Math.atan2(dy, dx);
-          star.x = star.baseX - Math.cos(angle) * force * 30;
-          star.y = star.baseY - Math.sin(angle) * force * 30;
+          star.x = star.baseX - Math.cos(angle) * force * 30 + floatX;
+          star.y = star.baseY - Math.sin(angle) * force * 30 + floatY;
         } else {
-          // Smoothly return to base position
-          star.x += (star.baseX - star.x) * 0.05;
-          star.y += (star.baseY - star.y) * 0.05;
+          // Smoothly return to base position with floating
+          star.x += (star.baseX + floatX - star.x) * 0.05;
+          star.y += (star.baseY + floatY - star.y) * 0.05;
         }
 
         // Draw star
@@ -93,13 +98,13 @@ export function StarField() {
     };
 
     resizeCanvas();
-    window.addEventListener("resize", resizeCanvas);
-    window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener('resize', resizeCanvas);
+    window.addEventListener('mousemove', handleMouseMove);
     animate();
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas);
-      window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('mousemove', handleMouseMove);
       cancelAnimationFrame(animationRef.current);
     };
   }, [resolvedTheme]);
