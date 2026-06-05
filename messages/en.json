@@ -38,11 +38,11 @@
   },
   "about": {
     "title": "About Me",
-    "subtitle": "Engineering mindset, creative solutions",
-    "intro": "I'm a 4th-year Cybersecurity & AI student at ESATIC, passionate about building software that's not just functional, but secure and elegant.",
+    "subtitle": "A mindset of an engineer, creative solutions",
+    "intro": "I'm a 4th-year Cybersecurity & AI student at ESATIC, genuinely curious about development, data/AI, and security. That breadth of interest pushes me to look at problems from multiple angles, not just through the lens of a single specialty.",
     "philosophy": {
       "title": "My Philosophy",
-      "content": "I believe great software emerges from the intersection of strong engineering principles and genuine user empathy. Security isn't an afterthought—it's woven into every line of code I write."
+      "content": "I'm equally interested in how a system is built and how it can be broken. That dual perspective — building and questioning — shapes how I approach every project, whether it's technical, data-driven, or security-focused."
     },
     "approach": {
       "title": "My Approach",
@@ -60,6 +60,24 @@
           "description": "The tech landscape evolves daily. So do I."
         }
       ]
+    },
+    "profile": {
+      "softSkills": {
+        "title": "Soft Skills",
+        "items": [
+          "Curiosity & auto-didact",
+          "Team spirit & autonomy",
+          "Rigor & organization",
+          "Challenge-driven & innovative projects"
+        ]
+      },
+      "languages": {
+        "title": "Languages",
+        "items": [
+          { "name": "French", "level": "C2" },
+          { "name": "English", "level": "B1" }
+        ]
+      }
     }
   },
   "projects": {

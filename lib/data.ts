@@ -293,6 +293,8 @@ export const skillCategories: SkillCategory[] = [
       { name: 'Figma', level: 4 },
       { name: 'Postman / API Testing', level: 4 },
       { name: 'VS Code / Dev Tools', level: 5 },
+      { name: 'Wireshark', level: 4 },
+      { name: 'VMware', level: 4 },
     ],
   },
 ];

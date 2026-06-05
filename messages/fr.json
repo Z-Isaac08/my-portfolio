@@ -39,10 +39,10 @@
   "about": {
     "title": "À Propos",
     "subtitle": "Un état d'esprit d'ingénieur, des solutions créatives",
-    "intro": "Je suis étudiant en 4ème année Cybersécurité & IA à l'ESATIC, passionné par la création de logiciels non seulement fonctionnels, mais sécurisés et élégants.",
+    "intro": "Je suis étudiant en 4ème année Cybersécurité & IA à l'ESATIC, passionné par des domaines aussi variés que le développement, la data/IA et la sécurité. Cette curiosité plurielle me pousse à comprendre les problèmes dans leur ensemble, pas seulement sous un seul angle.",
     "philosophy": {
       "title": "Ma Philosophie",
-      "content": "Je crois que les grands logiciels naissent de l'intersection de principes d'ingénierie solides et d'une véritable empathie utilisateur. La sécurité n'est pas une réflexion après coup—elle est tissée dans chaque ligne de code que j'écris."
+      "content": "Je m'intéresse autant à la façon dont un système est construit qu'à la façon dont il peut être compromis. Cette double lecture — construire et questionner — guide ma façon d'aborder chaque projet, qu'il soit technique, orienté données ou lié à la sécurité."
     },
     "approach": {
       "title": "Mon Approche",
@@ -60,6 +60,24 @@
           "description": "Le paysage technologique évolue quotidiennement. Moi aussi."
         }
       ]
+    },
+    "profile": {
+      "softSkills": {
+        "title": "Savoir-Être",
+        "items": [
+          "Curiosité intellectuelle & auto-didacte",
+          "Esprit d'équipe & autonomie",
+          "Rigueur & organisation",
+          "Goût du défi & projets innovants"
+        ]
+      },
+      "languages": {
+        "title": "Langues",
+        "items": [
+          { "name": "Français", "level": "C2" },
+          { "name": "Anglais", "level": "B1" }
+        ]
+      }
     }
   },
   "projects": {
