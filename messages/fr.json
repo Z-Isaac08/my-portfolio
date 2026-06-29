@@ -99,6 +99,18 @@
       "highlights": "Points Clés"
     },
     "items": {
+      "mamaci": {
+        "title": "MamaCi (1er Prix Hackathon JDN)",
+        "description": "Application mobile de santé maternelle et infantile en Côte d'Ivoire.",
+        "longDescription": "MamaCi accompagne les femmes enceintes et jeunes mamans via leur identifiant CMU. Elle propose un calendrier personnalisé, des rappels de vaccination, un chatbot d'orientation, et une carte des centres de santé. Un mode simplifié pour les connexions instables est prévu, ainsi qu'une interface praticien pour gérer un carnet de santé électronique.",
+        "role": "Développeur Backend / Vainqueur du Hackathon",
+        "highlights": [
+          "1er Prix remporté au Hackathon JDN (Journées du Numérique)",
+          "Intégration d'un chatbot d'orientation et de conseils santé",
+          "Génération de calendrier de suivi (grossesse & vaccination)",
+          "Conception orientée accessibilité (mode pour connexion instable)"
+        ]
+      },
       "studyspace": {
         "title": "StudySpace",
         "description": "Plateforme d'étude collaborative avec outils temps réel et espaces de travail organisés.",
@@ -261,6 +273,19 @@
       "project": "Projet"
     },
     "experiences": {
+      "mamaci-hackathon": {
+        "title": "1er Prix - Hackathon JDN",
+        "organization": "Journées du Numérique (JDN)",
+        "period": "25-26 juin 2026",
+        "description": "Développement de MamaCi, une application de santé maternelle et infantile primée lors du hackathon. L'application facilite le suivi des consultations prénatales et des vaccinations en s'appuyant sur l'identifiant CMU.",
+        "achievements": [
+          "Remise du 1er Prix au Hackathon JDN",
+          "Développement d'un système de calendrier intelligent et de rappels",
+          "Intégration d'un chatbot pour l'orientation médicale",
+          "Code source: https://github.com/Z-Isaac08/MamaCI",
+          "Coéquipières: Tia Djemila, Frean Grâce, Ouedraogo Rabiatou, Bamba Noura"
+        ]
+      },
       "esatic-master": {
         "title": "Master - Spécialisation Cybersécurité & IA",
         "organization": "ESATIC - École Supérieure Africaine des TIC",

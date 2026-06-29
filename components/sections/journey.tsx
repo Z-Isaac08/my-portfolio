@@ -12,6 +12,7 @@ import { Briefcase, GraduationCap, Rocket } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const experienceKeys = [
+  { id: "mamaci-hackathon", type: "project" },
   { id: "esatic-master", type: "education" },
   { id: "akiba-internship", type: "work" },
   { id: "technovore-hackathon", type: "project" },
@@ -66,8 +67,7 @@ export function Journey() {
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   className={cn(
-                    "relative grid gap-4 md:grid-cols-2 md:gap-8",
-                    isEven ? "md:text-right" : ""
+                    "relative grid gap-4 md:grid-cols-2 md:gap-8 text-left"
                   )}
                 >
                   {/* Timeline dot */}
@@ -99,10 +99,7 @@ export function Journey() {
                     >
                       {/* Type badge and period */}
                       <div
-                        className={cn(
-                          "flex items-center gap-3 mb-3 flex-wrap",
-                          isEven ? "md:flex-row-reverse" : ""
-                        )}
+                        className="flex items-center gap-3 mb-3 flex-wrap"
                       >
                         <Badge
                           variant="outline"
@@ -128,22 +125,22 @@ export function Journey() {
                       </p>
 
                       {/* Achievements */}
-                      <ul
-                        className={cn(
-                          "space-y-1.5",
-                          isEven ? "md:text-right" : ""
-                        )}
-                      >
+                      <ul className="space-y-1.5 text-left">
                         {achievements.map((achievement, i) => (
                           <li
                             key={i}
-                            className={cn(
-                              "flex items-start gap-2 text-xs text-muted-foreground",
-                              isEven ? "md:flex-row-reverse" : ""
-                            )}
+                            className="flex items-start gap-2 text-xs text-muted-foreground"
                           >
                             <span className="mt-1.5 h-1 w-1 rounded-full bg-primary shrink-0" />
-                            <span>{achievement}</span>
+                            <span>
+                              {achievement.includes("http") ? (
+                                <a href={achievement.split(" ").pop()} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                                  {achievement}
+                                </a>
+                              ) : (
+                                achievement
+                              )}
+                            </span>
                           </li>
                         ))}
                       </ul>

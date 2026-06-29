@@ -99,6 +99,18 @@
       "highlights": "Key Highlights"
     },
     "items": {
+      "mamaci": {
+        "title": "MamaCi (1st Prize JDN Hackathon)",
+        "description": "Maternal and child health mobile application for Côte d'Ivoire.",
+        "longDescription": "MamaCi supports pregnant women and young mothers using their CMU ID. It features a personalized appointment calendar, vaccination reminders, an AI chatbot for guidance, and health center mapping. Designed with a simplified mode for unstable connections and a practitioner interface for electronic health records.",
+        "role": "Backend Developer / Hackathon Winner",
+        "highlights": [
+          "1st Prize Winner at the JDN Hackathon",
+          "Integrated healthcare orientation and advice chatbot",
+          "Automated tracking calendar for pregnancy and vaccinations",
+          "Accessibility-focused design for unstable network conditions"
+        ]
+      },
       "studyspace": {
         "title": "StudySpace",
         "description": "Collaborative study platform with real-time tools and organized workspaces.",
@@ -261,6 +273,19 @@
       "project": "Project"
     },
     "experiences": {
+      "mamaci-hackathon": {
+        "title": "1st Prize - JDN Hackathon",
+        "organization": "Journées du Numérique (JDN)",
+        "period": "June 25-26, 2026",
+        "description": "Developed MamaCi, an award-winning maternal and infant health app. The platform streamlines prenatal care tracking and child vaccinations using the CMU healthcare ID.",
+        "achievements": [
+          "Awarded 1st Prize at the JDN Hackathon",
+          "Built an intelligent scheduling and reminder system",
+          "Integrated a chatbot for medical orientation",
+          "Source code: https://github.com/Z-Isaac08/MamaCI",
+          "Teammates: Tia Djemila, Frean Grâce, Ouedraogo Rabiatou, Bamba Noura"
+        ]
+      },
       "esatic-master": {
         "title": "Master's - Cybersecurity & AI Specialization",
         "organization": "ESATIC - École Supérieure Africaine des TIC",

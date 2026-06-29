@@ -87,12 +87,18 @@ export function Knowledge() {
             />
 
             <div className="flex items-start gap-4 mb-6 relative z-10">
-              <div className={`p-3 rounded-lg bg-primary/10 transition-all duration-300 ${
-                isHovered ? 'bg-indigo-500/20' : ''
-              }`}>
-                <BookOpen className={`h-6 w-6 text-primary transition-all duration-300 ${
-                  isHovered ? 'text-indigo-500 dark:text-indigo-400 drop-shadow-[0_0_8px_rgba(99,102,241,0.6)]' : ''
-                }`} />
+              <div
+                className={`p-3 rounded-lg bg-primary/10 transition-all duration-300 ${
+                  isHovered ? 'bg-indigo-500/20' : ''
+                }`}
+              >
+                <BookOpen
+                  className={`h-6 w-6 text-primary transition-all duration-300 ${
+                    isHovered
+                      ? 'text-indigo-500 dark:text-indigo-400 drop-shadow-[0_0_8px_rgba(99,102,241,0.6)]'
+                      : ''
+                  }`}
+                />
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-semibold text-foreground mb-2">
@@ -136,11 +142,13 @@ export function Knowledge() {
             </div>
 
             <Link
-              href="https://znote-delta.vercel.app"
+              href="https://znote.isaacncho.tech"
               target="_blank"
               rel="noopener noreferrer"
               className={`flex items-center justify-center gap-2 w-full px-8 py-4 bg-primary hover:bg-primary/90 text-primary-foreground rounded-lg font-semibold transition-all duration-300 relative z-10 ${
-                isHovered ? 'shadow-[0_0_20px_rgba(99,102,241,0.3)] bg-indigo-600 hover:bg-indigo-700' : ''
+                isHovered
+                  ? 'shadow-[0_0_20px_rgba(99,102,241,0.3)] bg-indigo-600 hover:bg-indigo-700'
+                  : ''
               }`}
             >
               {t('cta')}
