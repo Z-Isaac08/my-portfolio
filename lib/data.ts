@@ -248,6 +248,79 @@ export const projects: Project[] = [
       "RESTful API with comprehensive documentation",
     ],
   },
+  {
+    id: "tp1-intrusion-detection",
+    title: "Network Intrusion Detection",
+    description: "Machine learning model to detect network intrusions",
+    longDescription:
+      "Academic project focused on building a machine learning model to analyze network traffic and detect potential intrusions or malicious activities.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Jupyter"],
+    category: "ai",
+    github: "https://github.com/Z-Isaac08/ml-cybersecurity",
+    featured: false,
+    year: "2026",
+    role: "Academic Project",
+    highlights: [
+      "Data preprocessing and feature engineering on network traffic logs",
+      "Implementation of classification algorithms for anomaly detection",
+      "Model evaluation using precision, recall, and F1-score",
+    ],
+  },
+  {
+    id: "tp2-fraud-detection",
+    title: "Credit Card Fraud Detection",
+    description:
+      "Anomaly detection system for fraudulent credit card transactions",
+    longDescription:
+      "Academic project aiming to identify fraudulent credit card transactions using anomaly detection and classification techniques on highly imbalanced datasets.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Imbalanced-learn"],
+    category: "ai",
+    github: "https://github.com/Z-Isaac08/ml-cybersecurity",
+    featured: false,
+    year: "2026",
+    role: "Academic Project",
+    highlights: [
+      "Handling highly imbalanced data (e.g., SMOTE, undersampling)",
+      "Exploratory Data Analysis (EDA) on transaction features",
+      "Training and tuning classification models (Random Forest, XGBoost)",
+    ],
+  },
+  {
+    id: "tp3-phishing-detection",
+    title: "Phishing Website Detection",
+    description: "Classification model to identify malicious phishing websites",
+    longDescription:
+      "Academic project developing a machine learning classifier to determine whether a given website is a phishing attempt based on its URL and structural features.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Jupyter"],
+    category: "ai",
+    github: "https://github.com/Z-Isaac08/ml-cybersecurity",
+    featured: false,
+    year: "2026",
+    role: "Academic Project",
+    highlights: [
+      "Feature extraction from URLs and web page metadata",
+      "Comparison of multiple classification algorithms",
+      "Achieved high accuracy in distinguishing legitimate and phishing sites",
+    ],
+  },
+  {
+    id: "tp4-malware-detection",
+    title: "Malware Detection",
+    description: "Machine learning approach for static malware detection",
+    longDescription:
+      "Academic project utilizing machine learning for static analysis of software to detect malware signatures and suspicious patterns.",
+    technologies: ["Python", "Scikit-learn", "Pandas", "Jupyter"],
+    category: "ai",
+    github: "https://github.com/Z-Isaac08/ml-cybersecurity",
+    featured: false,
+    year: "2026",
+    role: "Academic Project",
+    highlights: [
+      "Static analysis and feature extraction from executables",
+      "Building a robust classification model for malware detection",
+      "Evaluation of model performance and false positive rates",
+    ],
+  },
 ];
 
 export const skillCategories: SkillCategory[] = [

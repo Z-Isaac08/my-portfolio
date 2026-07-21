@@ -219,6 +219,50 @@
           "Segmentation de produits via Clustering K-Means",
           "Modélisation des relations prix-ventes par Régression Linéaire"
         ]
+      },
+      "tp1-intrusion-detection": {
+        "title": "Détection d'Intrusion Réseau",
+        "description": "Modèle de machine learning pour détecter les intrusions réseau",
+        "longDescription": "Projet académique axé sur la construction d'un modèle de machine learning pour analyser le trafic réseau et détecter les intrusions ou activités malveillantes potentielles.",
+        "role": "Projet Académique",
+        "highlights": [
+          "Prétraitement des données et ingénierie des caractéristiques sur les journaux de trafic réseau",
+          "Implémentation d'algorithmes de classification pour la détection d'anomalies",
+          "Évaluation du modèle utilisant la précision, le rappel et le score F1"
+        ]
+      },
+      "tp2-fraud-detection": {
+        "title": "Détection de Fraude par Carte Bancaire",
+        "description": "Système de détection d'anomalies pour les transactions frauduleuses",
+        "longDescription": "Projet académique visant à identifier les transactions frauduleuses par carte bancaire en utilisant des techniques de détection d'anomalies et de classification sur des jeux de données fortement déséquilibrés.",
+        "role": "Projet Académique",
+        "highlights": [
+          "Gestion de données fortement déséquilibrées (ex: SMOTE, sous-échantillonnage)",
+          "Analyse Exploratoire des Données (EDA) sur les caractéristiques des transactions",
+          "Entraînement et optimisation de modèles de classification"
+        ]
+      },
+      "tp3-phishing-detection": {
+        "title": "Détection de Sites de Phishing",
+        "description": "Modèle de classification pour identifier les sites web malveillants",
+        "longDescription": "Projet académique développant un classificateur d'apprentissage automatique pour déterminer si un site web donné est une tentative de phishing en fonction de son URL et de ses caractéristiques structurelles.",
+        "role": "Projet Académique",
+        "highlights": [
+          "Extraction de caractéristiques à partir d'URLs et de métadonnées de pages web",
+          "Comparaison de plusieurs algorithmes de classification",
+          "Atteinte d'une haute précision dans la distinction des sites légitimes et de phishing"
+        ]
+      },
+      "tp4-malware-detection": {
+        "title": "Détection de Logiciels Malveillants",
+        "description": "Approche par machine learning pour la détection statique de malwares",
+        "longDescription": "Projet académique utilisant le machine learning pour l'analyse statique de logiciels afin de détecter des signatures de malwares et des modèles suspects.",
+        "role": "Projet Académique",
+        "highlights": [
+          "Analyse statique et extraction de caractéristiques d'exécutables",
+          "Construction d'un modèle de classification robuste pour la détection de malwares",
+          "Évaluation des performances du modèle et des taux de faux positifs"
+        ]
       }
     }
   },
