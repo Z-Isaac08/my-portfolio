@@ -13,6 +13,7 @@
     "knowledge": "Connaissances",
     "skills": "Compétences",
     "journey": "Parcours",
+    "awards": "Distinctions",
     "contact": "Contact"
   },
   "hero": {
@@ -34,15 +35,20 @@
       "projects": "Projets Réalisés",
       "technologies": "Technologies"
     },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "E-mail"
+    },
     "scroll": "Défiler pour explorer"
   },
   "about": {
     "title": "À Propos",
     "subtitle": "Un état d'esprit d'ingénieur, des solutions créatives",
-    "intro": "Je suis étudiant en 4ème année Cybersécurité & IA à l'ESATIC, passionné par des domaines aussi variés que le développement, la data/IA et la sécurité. Cette curiosité plurielle me pousse à comprendre les problèmes dans leur ensemble, pas seulement sous un seul angle.",
+    "intro": "Étudiant en Master Cybersécurité & IA à l'ESATIC, passionné par des domaines aussi variés que le développement, la data/IA et la sécurité offensive. Cette curiosité plurielle me pousse à comprendre les problèmes dans leur ensemble, pas seulement sous un seul angle.",
     "philosophy": {
       "title": "Ma Philosophie",
-      "content": "Je m'intéresse autant à la façon dont un système est construit qu'à la façon dont il peut être compromis. Cette double lecture — construire et questionner — guide ma façon d'aborder chaque projet, qu'il soit technique, orienté données ou lié à la sécurité."
+      "content": "Je m'intéresse autant à la manière dont un système est construit qu'à celle dont il peut être compromis. Cette double perspective — construire et questionner — guide mon approche de chaque projet, qu'il soit technique, axé sur les données ou lié à la sécurité."
     },
     "approach": {
       "title": "Mon Approche",
@@ -269,6 +275,7 @@
   "knowledge": {
     "title": "Base de Connaissances Technique",
     "subtitle": "Explorations approfondies de la sécurité, l'infrastructure et les techniques offensives",
+    "brand": "ZNote",
     "description": "ZNote est mon blog technique où je documente des laboratoires pratiques, des writeups CTF, des rapports de pentest et des analyses approfondies d'infrastructure. Apprentissage continu par l'expérimentation pratique.",
     "categories": {
       "ctf": "CTF & Challenges",
@@ -284,27 +291,68 @@
     "categories": {
       "frontend": {
         "title": "Ingénierie Frontend",
-        "description": "Construire des interfaces utilisateur réactives, accessibles et performantes"
+        "description": "Construire des interfaces utilisateur réactives, accessibles et performantes",
+        "skills": {
+          "reactNext": "React / Next.js",
+          "typescript": "TypeScript / JavaScript",
+          "tailwind": "Tailwind CSS",
+          "htmlCss": "HTML5 / CSS3",
+          "uiUx": "UI/UX & Framer Motion"
+        }
       },
       "backend": {
         "title": "Développement Backend",
-        "description": "APIs scalables et architectures serveur robustes"
+        "description": "APIs scalables et architectures serveur robustes",
+        "skills": {
+          "python": "Python (FastAPI / Flask)",
+          "node": "Node.js (NestJS / Express)",
+          "go": "Go",
+          "database": "PostgreSQL / Prisma",
+          "cacheSecurity": "Redis & JWT / RBAC"
+        }
       },
       "security": {
         "title": "Cybersécurité",
-        "description": "Pratiques de développement sécurisé et évaluation des vulnérabilités"
+        "description": "Pratiques de développement sécurisé et évaluation des vulnérabilités",
+        "skills": {
+          "owasp": "OWASP Top 10 (Web/API)",
+          "reconnaissance": "Reconnaissance & Exploitation",
+          "activeDirectory": "Attaques Active Directory",
+          "privilegeEscalation": "Élévation de privilèges (Linux/Win)",
+          "remediation": "Remédiation & Rapports d'audit"
+        }
       },
       "tools": {
         "title": "Outils & Méthodes",
-        "description": "Outils de développement, systèmes de design et workflows collaboratifs"
+        "description": "Outils de développement, systèmes de design et workflows collaboratifs",
+        "skills": {
+          "securityTools": "Kali Linux / Burp Suite",
+          "networkScanning": "Nmap / RustScan",
+          "exploitation": "Metasploit / Impacket",
+          "adcs": "BloodHound / ADCS Tools",
+          "packetAnalysis": "Wireshark / pfSense"
+        }
       },
       "systems": {
         "title": "Systèmes & Infrastructure",
-        "description": "Infrastructure réseau, virtualisation et administration système"
+        "description": "Infrastructure réseau, virtualisation et administration système",
+        "skills": {
+          "linux": "Linux (Debian / Ubuntu / Kali)",
+          "windows": "Windows Server & AD DS",
+          "vmware": "VMware Workstation",
+          "docker": "Docker & Conteneurisation",
+          "networking": "Modèle OSI & Routage TCP/IP"
+        }
       },
       "data": {
         "title": "Données & Machine Learning",
-        "description": "Analyse de données, modélisation statistique et solutions d'apprentissage automatique"
+        "description": "Analyse de données, modélisation statistique et solutions d'apprentissage automatique",
+        "skills": {
+          "dataStack": "R & Python Data Stack",
+          "versionControl": "Git / GitHub & CI/CD",
+          "agile": "Méthodologies Agiles (Scrum)",
+          "uml": "Modélisation UML"
+        }
       }
     }
   },
@@ -313,23 +361,9 @@
     "subtitle": "Le chemin qui a façonné ma perspective d'ingénieur",
     "types": {
       "education": "Formation",
-      "work": "Expérience",
-      "project": "Projet"
+      "work": "Expérience"
     },
     "experiences": {
-      "mamaci-hackathon": {
-        "title": "1er Prix - Hackathon JDN",
-        "organization": "Journées du Numérique (JDN)",
-        "period": "25-26 juin 2026",
-        "description": "Développement de MamaCi, une application de santé maternelle et infantile primée lors du hackathon. L'application facilite le suivi des consultations prénatales et des vaccinations en s'appuyant sur l'identifiant CMU.",
-        "achievements": [
-          "Remise du 1er Prix au Hackathon JDN",
-          "Développement d'un système de calendrier intelligent et de rappels",
-          "Intégration d'un chatbot pour l'orientation médicale",
-          "Code source: https://github.com/Z-Isaac08/MamaCI",
-          "Coéquipières: Tia Djemila, Frean Grâce, Ouedraogo Rabiatou, Bamba Noura"
-        ]
-      },
       "esatic-master": {
         "title": "Master - Spécialisation Cybersécurité & IA",
         "organization": "ESATIC - École Supérieure Africaine des TIC",
@@ -353,18 +387,6 @@
           "Conception de diagrammes UML et suivi de la méthodologie Processus Unifié"
         ]
       },
-      "technovore-hackathon": {
-        "title": "2ème Prix - TECHNOVORE HACKATHON",
-        "organization": "Concours Technovore",
-        "period": "28 Fév - 2 Mars 2025",
-        "description": "Conception d'un système intelligent de lutte contre le braconnage (BioGuard) combinant cartographie satellite, drones équipés d'IA et capteurs acoustiques.",
-        "achievements": [
-          "2ème Prix obtenu pour la solution innovante",
-          "Architecture réseau hybride LoRa/LoRaWAN et VSAT pour les zones reculées",
-          "Système d'alerte en temps réel pour les agents via montres connectées",
-          "Coéquipiers : ABE Monnet Anderson, ALIMBE Ashley Ange-Baruk"
-        ]
-      },
       "esatic-licence": {
         "title": "Licence - Systèmes Réseaux & Télécommunications",
         "organization": "ESATIC - École Supérieure Africaine des TIC",
@@ -374,17 +396,6 @@
           "Solide base en protocoles réseau",
           "Compétences en développement web et mobile full-stack",
           "Conception et administration de bases de données"
-        ]
-      },
-      "industry-project": {
-        "title": "Chef d'Équipe - Projet Industrie 4.0",
-        "organization": "Projet Académique",
-        "period": "2023",
-        "description": "Direction d'une équipe pour développer une solution d'optimisation d'élevage alimentée par l'IA dans le cadre d'une initiative Industrie 4.0.",
-        "achievements": [
-          "Gestion d'une équipe de 4 développeurs avec méthodologie Agile",
-          "Livraison du projet 2 semaines en avance",
-          "Optimisation des ressources de 30% lors des tests"
         ]
       },
       "bac": {
@@ -399,15 +410,84 @@
       }
     }
   },
+  "awards": {
+    "title": "Distinctions",
+    "subtitle": "Prix obtenus lors de concours et de projets d'innovation",
+    "groups": {
+      "distinction": "Prix et distinctions",
+      "certification": "Certifications"
+    },
+    "links": {
+      "verify": "Vérifier le certificat",
+      "viewCode": "Voir le code du projet"
+    },
+    "closeDetails": "Fermer les détails du certificat",
+    "issueDateLabel": "Date d'émission",
+    "credentialIdLabel": "Identifiant du certificat",
+    "skillsLabel": "Compétences",
+    "items": {
+      "jdn": {
+        "rank": "1er prix",
+        "title": "Hackathon JDN",
+        "organization": "Journées du Numérique (JDN)",
+        "date": "25-26 juin 2026",
+        "shortDescription": "1er prix pour MamaCi, une application de santé maternelle et infantile.",
+        "description": "Prix obtenu pour MamaCi, une application de santé maternelle et infantile."
+      },
+      "technovore": {
+        "rank": "2e prix",
+        "title": "Hackathon TECHNOVORE",
+        "organization": "Concours Technovore",
+        "date": "28 février - 2 mars 2025",
+        "shortDescription": "2e prix pour BioGuard, une solution intelligente de lutte contre le braconnage.",
+        "description": "Prix obtenu pour BioGuard, une solution intelligente de lutte contre le braconnage."
+      },
+      "musia": {
+        "rank": "1er prix",
+        "title": "Projet MUSIA | Guide Muséal Intelligent",
+        "organization": "CID - Cellule d'Innovation et de Développement",
+        "date": "18 décembre 2025",
+        "shortDescription": "1er prix pour le prototype autonome de guide muséal intelligent MUSIA.",
+        "description": "Conception d'un prototype de robot guide autonome intégrant l'intelligence artificielle et la robotique mobile pour l'accompagnement personnalisé des visiteurs."
+      },
+      "web-rta": {
+        "rank": "Certification",
+        "title": "Certified Web Red Team Analyst (Web-RTA)",
+        "organization": "Cyberwarfare Labs",
+        "date": "6/2/2026",
+        "shortDescription": "Certification en tests d'intrusion web et techniques Red Team.",
+        "description": "Certification obtenue après la réussite de l'examen pratique Web-RTA, couvrant les tests d'intrusion web, la reconnaissance, les injections, les failles d'authentification et d'autorisation, les vecteurs avancés et l'enchaînement d'attaques.",
+        "imageAlt": "Certificat Web-RTA délivré à Isaac N'CHO par Cyberwarfare Labs",
+        "verify": "Vérifier le certificat",
+        "openDetails": "Voir les détails du certificat",
+        "credentialId": "6a1f31919b5a57bc0335459f",
+        "skills": [
+          "Sécurité web",
+          "Tests d'intrusion applicatifs",
+          "Outils Red Team",
+          "Frameworks d'exploitation",
+          "Analyse de la surface d'attaque",
+          "Exploitation",
+          "Évasion des défenses",
+          "OSINT"
+        ]
+      }
+    }
+  },
   "contact": {
     "title": "Construisons Quelque Chose Ensemble",
     "subtitle": "Vous avez un projet en tête ou souhaitez discuter d'opportunités ? J'aimerais beaucoup vous entendre.",
     "form": {
       "name": "Votre Nom",
-      "email": "Votre Email",
+      "namePlaceholder": "Jean Doe",
+      "email": "Votre E-mail",
+      "emailPlaceholder": "jean@exemple.com",
       "message": "Votre Message",
+      "messagePlaceholder": "Votre message...",
       "send": "Envoyer le Message",
-      "sending": "Envoi en cours..."
+      "sending": "Envoi en cours...",
+      "sent": "Envoyé !",
+      "mailtoSubject": "Contact du portfolio de {{name}}"
     },
     "info": {
       "email": "Email",

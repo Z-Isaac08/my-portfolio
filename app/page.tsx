@@ -1,5 +1,7 @@
+import { AmbientGlow } from '@/components/ambient-glow';
 import {
   About,
+  Awards,
   Contact,
   Footer,
   Hero,
@@ -9,7 +11,6 @@ import {
   Projects,
   Skills,
 } from '@/components/sections';
-import { AmbientGlow } from '@/components/ambient-glow';
 
 export default function Home() {
   return (
@@ -18,13 +19,14 @@ export default function Home() {
       <main className="relative overflow-hidden">
         {/* Global animated Aurora & Cyber Grid background */}
         <AmbientGlow />
-        
+
         <Hero />
         <About />
         <Projects />
         <Knowledge />
         <Skills />
         <Journey />
+        <Awards />
         <Contact />
       </main>
       <Footer />

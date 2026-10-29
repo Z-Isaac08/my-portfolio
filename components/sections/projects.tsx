@@ -96,7 +96,7 @@ export function Projects() {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3, delay: 0.3 + index * 0.1 }}
                 >
-                  <ProjectCard project={project} t={t} tc={tc} />
+                  <ProjectCard project={project} t={t} />
                 </motion.div>
               ))}
             </motion.div>
@@ -120,8 +120,6 @@ function FeaturedProjectCard({
   t: ReturnType<typeof useTranslations>;
   tc: ReturnType<typeof useTranslations>;
 }) {
-  const highlights = [0, 1, 2, 3]; // We assume 4 highlights per project for simplicity or we can check translation keys if dynamic length is needed, but fixed 4 is safer for now based on JSON structure
-
   return (
     <motion.div
       layout
@@ -145,8 +143,8 @@ function FeaturedProjectCard({
         </div>
 
         {/* Title & Description */}
-        <h3 className="text-xl md:text-2xl font-bold mb-2">{t(`items.${project.id}.title`)}</h3>
-        <p className="text-muted-foreground mb-4">{t(`items.${project.id}.description`)}</p>
+        <h3 className="text-xl md:text-2xl font-bold mb-2">{t(project.titleKey)}</h3>
+        <p className="text-muted-foreground mb-4">{t(project.descriptionKey)}</p>
 
         {/* Tech stack */}
         <div className="flex flex-wrap gap-2 mb-4">
@@ -176,25 +174,23 @@ function FeaturedProjectCard({
               className="overflow-hidden"
             >
               <div className="pt-4 border-t border-border space-y-4">
-                <p className="text-sm text-muted-foreground">
-                  {t(`items.${project.id}.longDescription`)}
-                </p>
+                <p className="text-sm text-muted-foreground">{t(project.longDescriptionKey)}</p>
 
                 <div className="grid gap-4 md:grid-cols-2">
                   <div>
                     <h4 className="text-sm font-medium mb-2">{t('details.role')}</h4>
-                    <p className="text-sm text-muted-foreground">{t(`items.${project.id}.role`)}</p>
+                    <p className="text-sm text-muted-foreground">{t(project.roleKey)}</p>
                   </div>
                   <div>
                     <h4 className="text-sm font-medium mb-2">{t('details.highlights')}</h4>
                     <ul className="space-y-1">
-                      {highlights.map(i => (
+                      {project.highlightsKey.map(highlightKey => (
                         <li
-                          key={i}
+                          key={highlightKey}
                           className="text-sm text-muted-foreground flex items-start gap-2"
                         >
                           <span className="mt-1.5 h-1 w-1 rounded-full bg-primary shrink-0" />
-                          {t(`items.${project.id}.highlights.${i}`)}
+                          {t(highlightKey)}
                         </li>
                       ))}
                     </ul>
@@ -229,15 +225,7 @@ function FeaturedProjectCard({
   );
 }
 
-function ProjectCard({
-  project,
-  t,
-  tc,
-}: {
-  project: Project;
-  t: ReturnType<typeof useTranslations>;
-  tc: ReturnType<typeof useTranslations>;
-}) {
+function ProjectCard({ project, t }: { project: Project; t: ReturnType<typeof useTranslations> }) {
   return (
     <motion.div
       className="glass rounded-xl p-6 h-full flex flex-col border border-border/40 transition-all duration-300 hover:border-indigo-500/35 hover:shadow-[0_0_25px_rgba(99,102,241,0.12)]"
@@ -251,10 +239,8 @@ function ProjectCard({
         <span className="text-xs text-muted-foreground">{project.year}</span>
       </div>
 
-      <h3 className="text-lg font-semibold mb-2">{t(`items.${project.id}.title`)}</h3>
-      <p className="text-sm text-muted-foreground mb-4 grow">
-        {t(`items.${project.id}.description`)}
-      </p>
+      <h3 className="text-lg font-semibold mb-2">{t(project.titleKey)}</h3>
+      <p className="text-sm text-muted-foreground mb-4 grow">{t(project.descriptionKey)}</p>
 
       <div className="flex flex-wrap gap-1.5 mb-4">
         {project.technologies.slice(0, 4).map(tech => (

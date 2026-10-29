@@ -1,43 +1,55 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
-import { StarField } from "@/components/star-field";
-import { Button } from "@/components/ui/button";
-import { heroStats, siteConfig } from "@/lib/data";
-import { motion } from "framer-motion";
-import { ArrowDown, Github, Linkedin, Mail } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { StarField } from '@/components/star-field';
+import { Button } from '@/components/ui/button';
+import { heroStats, siteConfig } from '@/lib/data';
+import { motion } from 'framer-motion';
+import { ArrowDown, Github, Linkedin, Mail } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
 
-function Typewriter({ words, speed = 75, eraseSpeed = 35, delay = 3000 }: { words: string[]; speed?: number; eraseSpeed?: number; delay?: number }) {
+function Typewriter({
+  words,
+  speed = 75,
+  eraseSpeed = 35,
+  delay = 3000,
+}: {
+  words: string[];
+  speed?: number;
+  eraseSpeed?: number;
+  delay?: number;
+}) {
   const [wordIndex, setWordIndex] = useState(0);
-  const [displayedText, setDisplayedText] = useState("");
+  const [displayedText, setDisplayedText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
 
   // Reset typewriter state when the words list changes (e.g. language toggle)
   useEffect(() => {
+    // This reset is intentionally synchronous because the new language changes the displayed words.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setWordIndex(0);
-    setDisplayedText("");
+    setDisplayedText('');
     setIsDeleting(false);
   }, [words]);
 
   useEffect(() => {
     let isMounted = true;
-    const currentWord = words[wordIndex] || "";
+    const currentWord = words[wordIndex] || '';
 
     const tick = () => {
       if (!isMounted) return;
 
       if (isDeleting) {
         // Deleting character
-        setDisplayedText((prev) => {
+        setDisplayedText(prev => {
           if (prev.length > 0) {
             return prev.slice(0, -1);
           }
-          return "";
+          return '';
         });
       } else {
         // Typing character
-        setDisplayedText((prev) => {
+        setDisplayedText(prev => {
           if (prev.length < currentWord.length) {
             return currentWord.slice(0, prev.length + 1);
           }
@@ -53,10 +65,11 @@ function Typewriter({ words, speed = 75, eraseSpeed = 35, delay = 3000 }: { word
       timer = setTimeout(() => {
         if (isMounted) setIsDeleting(true);
       }, delay);
-    } else if (isDeleting && displayedText === "") {
+    } else if (isDeleting && displayedText === '') {
       // Finished deleting, move to next word
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setIsDeleting(false);
-      setWordIndex((prev) => (prev + 1) % words.length);
+      setWordIndex(prev => (prev + 1) % words.length);
     } else {
       // Continue typing or deleting
       timer = setTimeout(tick, isDeleting ? eraseSpeed : speed);
@@ -71,13 +84,16 @@ function Typewriter({ words, speed = 75, eraseSpeed = 35, delay = 3000 }: { word
   return (
     <span className="inline-flex items-center justify-center">
       <span>{displayedText}</span>
-      <span className="ml-1 inline-block w-[3px] h-[1.15em] bg-primary animate-pulse" style={{ verticalAlign: "middle" }} />
+      <span
+        className="ml-1 inline-block w-0.75 h-[1.15em] bg-primary animate-pulse"
+        style={{ verticalAlign: 'middle' }}
+      />
     </span>
   );
 }
 
 export function Hero() {
-  const t = useTranslations("hero");
+  const t = useTranslations('hero');
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -99,7 +115,7 @@ export function Hero() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           }}
         />
         <motion.div
@@ -111,7 +127,7 @@ export function Hero() {
           transition={{
             duration: 8,
             repeat: Infinity,
-            ease: "easeInOut",
+            ease: 'easeInOut',
           }}
         />
       </div>
@@ -124,7 +140,7 @@ export function Hero() {
           transition={{ duration: 0.5 }}
           className="text-sm font-medium tracking-widest text-muted-foreground uppercase mb-4"
         >
-          {t("greeting")}
+          {t('greeting')}
         </motion.p>
 
         {/* Name */}
@@ -134,7 +150,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.1 }}
           className="text-4xl font-bold tracking-tight sm:text-6xl lg:text-7xl mb-4"
         >
-          {t("name")}
+          {t('name')}
         </motion.h1>
 
         {/* Title with typewriter effect */}
@@ -144,7 +160,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.2 }}
           className="text-lg sm:text-xl lg:text-2xl text-muted-foreground font-medium mb-6 min-h-[1.5em] flex items-center justify-center"
         >
-          <Typewriter words={t.raw("titles")} />
+          <Typewriter words={t.raw('titles')} />
         </motion.div>
 
         {/* Description */}
@@ -154,7 +170,7 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.3 }}
           className="mx-auto max-w-2xl text-base sm:text-lg text-muted-foreground mb-8"
         >
-          {t("description")}
+          {t('description')}
         </motion.p>
 
         {/* CTA Buttons */}
@@ -165,10 +181,10 @@ export function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <Button size="lg" asChild className="min-w-45">
-            <a href="#projects">{t("cta.projects")}</a>
+            <a href="#projects">{t('cta.projects')}</a>
           </Button>
           <Button size="lg" variant="outline" asChild className="min-w-45">
-            <a href="#contact">{t("cta.contact")}</a>
+            <a href="#contact">{t('cta.contact')}</a>
           </Button>
         </motion.div>
 
@@ -179,19 +195,11 @@ export function Hero() {
           transition={{ duration: 0.5, delay: 0.5 }}
           className="flex items-center justify-center gap-8 sm:gap-12 mb-12"
         >
-          {heroStats.map((stat, index) => (
-            <div key={index} className="text-center">
+          {heroStats.map(stat => (
+            <div key={stat.key} className="text-center">
               <div className="text-2xl sm:text-3xl font-bold">{stat.value}</div>
               <div className="text-xs sm:text-sm text-muted-foreground">
-                {t(
-                  `stats.${
-                    stat.label === "Years Learning"
-                      ? "years"
-                      : stat.label === "Projects Built"
-                      ? "projects"
-                      : "technologies"
-                  }`
-                )}
+                {t(`stats.${stat.key}`)}
               </div>
             </div>
           ))}
@@ -209,7 +217,7 @@ export function Hero() {
               href={siteConfig.social.github}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="GitHub"
+              aria-label={t('social.github')}
             >
               <Github className="h-5 w-5" />
             </a>
@@ -219,13 +227,13 @@ export function Hero() {
               href={siteConfig.social.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              aria-label="LinkedIn"
+              aria-label={t('social.linkedin')}
             >
               <Linkedin className="h-5 w-5" />
             </a>
           </Button>
           <Button variant="ghost" size="icon" asChild>
-            <a href={siteConfig.social.email} aria-label="Email">
+            <a href={siteConfig.social.email} aria-label={t('social.email')}>
               <Mail className="h-5 w-5" />
             </a>
           </Button>
@@ -239,10 +247,10 @@ export function Hero() {
         transition={{ duration: 0.5, delay: 1 }}
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
-        <span className="text-xs text-muted-foreground">{t("scroll")}</span>
+        <span className="text-xs text-muted-foreground">{t('scroll')}</span>
         <motion.div
           animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: 'easeInOut' }}
         >
           <ArrowDown className="h-4 w-4 text-muted-foreground" />
         </motion.div>

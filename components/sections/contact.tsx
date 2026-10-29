@@ -1,80 +1,64 @@
-"use client";
+'use client';
 
-import { MotionSection } from "@/components/motion";
-import {
-  SectionContainer,
-  SectionHeader,
-} from "@/components/section-container";
-import { Button } from "@/components/ui/button";
-import { siteConfig } from "@/lib/data";
-import { cn } from "@/lib/utils";
-import { motion } from "framer-motion";
-import {
-  CheckCircle,
-  Clock,
-  Github,
-  Linkedin,
-  Loader2,
-  Mail,
-  MapPin,
-  Send,
-} from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { MotionSection } from '@/components/motion';
+import { SectionContainer, SectionHeader } from '@/components/section-container';
+import { Button } from '@/components/ui/button';
+import { siteConfig } from '@/lib/data';
+import { cn } from '@/lib/utils';
+import { motion } from 'framer-motion';
+import { CheckCircle, Clock, Github, Linkedin, Loader2, Mail, MapPin, Send } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 
 export function Contact() {
-  const t = useTranslations("contact");
-  const [formState, setFormState] = useState<"idle" | "sending" | "sent">(
-    "idle"
-  );
+  const t = useTranslations('contact');
+  const [formState, setFormState] = useState<'idle' | 'sending' | 'sent'>('idle');
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
+    name: '',
+    email: '',
+    message: '',
   });
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setFormState("sending");
+    setFormState('sending');
 
     // Simulate form submission - in production, replace with actual API call
-    await new Promise((resolve) => setTimeout(resolve, 1500));
+    await new Promise(resolve => setTimeout(resolve, 1500));
 
     // Open mailto as fallback
-    const mailtoLink = `mailto:${
-      siteConfig.email
-    }?subject=Portfolio Contact from ${formData.name}&body=${encodeURIComponent(
-      formData.message
-    )}%0A%0AFrom: ${formData.email}`;
+    const mailtoLink = `mailto:${siteConfig.email}?subject=${encodeURIComponent(
+      t('form.mailtoSubject', { name: formData.name })
+    )}&body=${encodeURIComponent(formData.message)}%0A%0AFrom: ${formData.email}`;
     window.location.href = mailtoLink;
 
-    setFormState("sent");
-    setTimeout(() => setFormState("idle"), 3000);
+    setFormState('sent');
+    setTimeout(() => setFormState('idle'), 3000);
   };
 
   const contactInfo = [
     {
       icon: Mail,
-      label: t("info.email"),
+      label: t('info.email'),
       value: siteConfig.email,
       href: `mailto:${siteConfig.email}`,
     },
     {
       icon: MapPin,
-      label: t("info.location"),
+      label: t('info.location'),
       value: siteConfig.location,
     },
     {
       icon: Clock,
-      label: t("info.availability"),
-      value: t("info.availableText"),
+      label: t('info.availability'),
+      value: t('info.availableText'),
     },
   ];
 
   return (
     <SectionContainer id="contact" className="bg-transparent">
       <MotionSection>
-        <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+        <SectionHeader title={t('title')} subtitle={t('subtitle')} />
 
         <div className="grid gap-12 lg:grid-cols-2">
           {/* Contact Form */}
@@ -87,11 +71,8 @@ export function Contact() {
           >
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
-                <label
-                  htmlFor="name"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {t("form.name")}
+                <label htmlFor="name" className="block text-sm font-medium mb-2">
+                  {t('form.name')}
                 </label>
                 <input
                   type="text"
@@ -99,26 +80,21 @@ export function Contact() {
                   name="name"
                   required
                   value={formData.name}
-                  onChange={(e) =>
-                    setFormData({ ...formData, name: e.target.value })
-                  }
+                  onChange={e => setFormData({ ...formData, name: e.target.value })}
                   className={cn(
-                    "w-full px-4 py-2.5 rounded-lg",
-                    "bg-background/50 border border-border",
-                    "focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent",
-                    "transition-all duration-200",
-                    "placeholder:text-muted-foreground/60"
+                    'w-full px-4 py-2.5 rounded-lg',
+                    'bg-background/50 border border-border',
+                    'focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent',
+                    'transition-all duration-200',
+                    'placeholder:text-muted-foreground/60'
                   )}
-                  placeholder="John Doe"
+                  placeholder={t('form.namePlaceholder')}
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {t("form.email")}
+                <label htmlFor="email" className="block text-sm font-medium mb-2">
+                  {t('form.email')}
                 </label>
                 <input
                   type="email"
@@ -126,26 +102,21 @@ export function Contact() {
                   name="email"
                   required
                   value={formData.email}
-                  onChange={(e) =>
-                    setFormData({ ...formData, email: e.target.value })
-                  }
+                  onChange={e => setFormData({ ...formData, email: e.target.value })}
                   className={cn(
-                    "w-full px-4 py-2.5 rounded-lg",
-                    "bg-background/50 border border-border",
-                    "focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent",
-                    "transition-all duration-200",
-                    "placeholder:text-muted-foreground/60"
+                    'w-full px-4 py-2.5 rounded-lg',
+                    'bg-background/50 border border-border',
+                    'focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent',
+                    'transition-all duration-200',
+                    'placeholder:text-muted-foreground/60'
                   )}
-                  placeholder="john@example.com"
+                  placeholder={t('form.emailPlaceholder')}
                 />
               </div>
 
               <div>
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium mb-2"
-                >
-                  {t("form.message")}
+                <label htmlFor="message" className="block text-sm font-medium mb-2">
+                  {t('form.message')}
                 </label>
                 <textarea
                   id="message"
@@ -153,42 +124,35 @@ export function Contact() {
                   required
                   rows={5}
                   value={formData.message}
-                  onChange={(e) =>
-                    setFormData({ ...formData, message: e.target.value })
-                  }
+                  onChange={e => setFormData({ ...formData, message: e.target.value })}
                   className={cn(
-                    "w-full px-4 py-2.5 rounded-lg resize-none",
-                    "bg-background/50 border border-border",
-                    "focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent",
-                    "transition-all duration-200",
-                    "placeholder:text-muted-foreground/60"
+                    'w-full px-4 py-2.5 rounded-lg resize-none',
+                    'bg-background/50 border border-border',
+                    'focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent',
+                    'transition-all duration-200',
+                    'placeholder:text-muted-foreground/60'
                   )}
-                  placeholder="Your message..."
+                  placeholder={t('form.messagePlaceholder')}
                 />
               </div>
 
-              <Button
-                type="submit"
-                size="lg"
-                className="w-full"
-                disabled={formState !== "idle"}
-              >
-                {formState === "idle" && (
+              <Button type="submit" size="lg" className="w-full" disabled={formState !== 'idle'}>
+                {formState === 'idle' && (
                   <>
                     <Send className="h-4 w-4 mr-2" />
-                    {t("form.send")}
+                    {t('form.send')}
                   </>
                 )}
-                {formState === "sending" && (
+                {formState === 'sending' && (
                   <>
                     <Loader2 className="h-4 w-4 mr-2 animate-spin" />
-                    {t("form.sending")}
+                    {t('form.sending')}
                   </>
                 )}
-                {formState === "sent" && (
+                {formState === 'sent' && (
                   <>
                     <CheckCircle className="h-4 w-4 mr-2" />
-                    Sent!
+                    {t('form.sent')}
                   </>
                 )}
               </Button>
@@ -205,21 +169,19 @@ export function Contact() {
           >
             {/* Info cards */}
             <div className="space-y-4">
-              {contactInfo.map((info) => {
+              {contactInfo.map(info => {
                 const Icon = info.icon;
                 const content = (
                   <motion.div
                     className="glass rounded-xl p-5 flex items-center gap-4"
                     whileHover={{ x: 4 }}
-                    transition={{ type: "spring", stiffness: 400, damping: 17 }}
+                    transition={{ type: 'spring', stiffness: 400, damping: 17 }}
                   >
                     <div className="p-2.5 rounded-lg bg-primary/10">
                       <Icon className="h-5 w-5 text-primary" />
                     </div>
                     <div>
-                      <p className="text-sm text-muted-foreground">
-                        {info.label}
-                      </p>
+                      <p className="text-sm text-muted-foreground">{info.label}</p>
                       <p className="font-medium">{info.value}</p>
                     </div>
                   </motion.div>
@@ -237,14 +199,14 @@ export function Contact() {
 
             {/* Social links */}
             <div className="glass rounded-xl p-6">
-              <h3 className="font-semibold mb-4">{t("social")}</h3>
+              <h3 className="font-semibold mb-4">{t('social')}</h3>
               <div className="flex gap-3">
                 <Button variant="outline" size="icon" asChild>
                   <a
                     href={siteConfig.social.github}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="GitHub"
+                    aria-label={t('social.github')}
                   >
                     <Github className="h-5 w-5" />
                   </a>
@@ -254,13 +216,13 @@ export function Contact() {
                     href={siteConfig.social.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="LinkedIn"
+                    aria-label={t('social.linkedin')}
                   >
                     <Linkedin className="h-5 w-5" />
                   </a>
                 </Button>
                 <Button variant="outline" size="icon" asChild>
-                  <a href={siteConfig.social.email} aria-label="Email">
+                  <a href={siteConfig.social.email} aria-label={t('social.email')}>
                     <Mail className="h-5 w-5" />
                   </a>
                 </Button>
@@ -276,12 +238,9 @@ export function Contact() {
               className="p-6 border-l-2 border-primary/30"
             >
               <p className="text-muted-foreground italic">
-                &ldquo;The best way to predict the future is to create
-                it.&rdquo;
+                &ldquo;The best way to predict the future is to create it.&rdquo;
               </p>
-              <p className="text-sm text-muted-foreground mt-2">
-                — Peter Drucker
-              </p>
+              <p className="text-sm text-muted-foreground mt-2">- Peter Drucker</p>
             </motion.div>
           </motion.div>
         </div>

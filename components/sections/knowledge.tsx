@@ -18,6 +18,8 @@ function DecryptText({ text, isHovered }: DecryptTextProps) {
 
   useEffect(() => {
     if (!isHovered) {
+      // The display returns to its source text when the interaction ends.
+      // eslint-disable-next-line react-hooks/set-state-in-effect
       setDisplayText(text);
       return;
     }
@@ -102,7 +104,7 @@ export function Knowledge() {
               </div>
               <div className="flex-1">
                 <h3 className="text-2xl font-semibold text-foreground mb-2">
-                  <DecryptText text="ZNote" isHovered={isHovered} />
+                  <DecryptText text={t('brand')} isHovered={isHovered} />
                 </h3>
                 <p className="text-muted-foreground mb-4">{t('description')}</p>
               </div>

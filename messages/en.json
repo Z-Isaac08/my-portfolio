@@ -13,6 +13,7 @@
     "knowledge": "Knowledge",
     "skills": "Skills",
     "journey": "Journey",
+    "awards": "Awards",
     "contact": "Contact"
   },
   "hero": {
@@ -34,15 +35,20 @@
       "projects": "Projects Built",
       "technologies": "Technologies"
     },
+    "social": {
+      "github": "GitHub",
+      "linkedin": "LinkedIn",
+      "email": "Email"
+    },
     "scroll": "Scroll to explore"
   },
   "about": {
     "title": "About Me",
-    "subtitle": "A mindset of an engineer, creative solutions",
-    "intro": "I'm a 4th-year Cybersecurity & AI student at ESATIC, genuinely curious about development, data/AI, and security. That breadth of interest pushes me to look at problems from multiple angles, not just through the lens of a single specialty.",
+    "subtitle": "An engineer's mindset, creative solutions",
+    "intro": "I'm pursuing a master's degree in Cybersecurity & AI at ESATIC, with a strong interest in fields as varied as software development, data and AI, and offensive security. This broad curiosity leads me to understand problems from multiple angles, rather than through a single specialty.",
     "philosophy": {
       "title": "My Philosophy",
-      "content": "I'm equally interested in how a system is built and how it can be broken. That dual perspective — building and questioning — shapes how I approach every project, whether it's technical, data-driven, or security-focused."
+      "content": "I'm as interested in how a system is built as in how it can be compromised. This dual perspective — building and questioning — shapes how I approach every project, whether it's technical, data-driven, or security-focused."
     },
     "approach": {
       "title": "My Approach",
@@ -269,6 +275,7 @@
   "knowledge": {
     "title": "Technical Knowledge Base",
     "subtitle": "In-depth explorations of security, infrastructure, and offensive techniques",
+    "brand": "ZNote",
     "description": "ZNote is my technical blog where I document hands-on labs, CTF writeups, pentest reports, and infrastructure deep dives. Continuous learning through practical experimentation.",
     "categories": {
       "ctf": "CTF & Challenges",
@@ -284,27 +291,68 @@
     "categories": {
       "frontend": {
         "title": "Frontend Engineering",
-        "description": "Building responsive, accessible, and performant user interfaces"
+        "description": "Building responsive, accessible, and performant user interfaces",
+        "skills": {
+          "reactNext": "React / Next.js",
+          "typescript": "TypeScript / JavaScript",
+          "tailwind": "Tailwind CSS",
+          "htmlCss": "HTML5 / CSS3",
+          "uiUx": "UI/UX & Framer Motion"
+        }
       },
       "backend": {
         "title": "Backend Development",
-        "description": "Scalable APIs and robust server-side architectures"
+        "description": "Scalable APIs and robust server-side architectures",
+        "skills": {
+          "python": "Python (FastAPI / Flask)",
+          "node": "Node.js (NestJS / Express)",
+          "go": "Go",
+          "database": "PostgreSQL / Prisma",
+          "cacheSecurity": "Redis & JWT / RBAC"
+        }
       },
       "security": {
         "title": "Cybersecurity",
-        "description": "Secure development practices and vulnerability assessment"
+        "description": "Secure development practices and vulnerability assessment",
+        "skills": {
+          "owasp": "OWASP Top 10 (Web/API)",
+          "reconnaissance": "Reconnaissance & Exploitation",
+          "activeDirectory": "Active Directory Attacks",
+          "privilegeEscalation": "Privilege Escalation (Linux/Win)",
+          "remediation": "Remediation & Audit Reports"
+        }
       },
       "tools": {
         "title": "Tools & Methods",
-        "description": "Development tools, design systems, and collaborative workflows"
+        "description": "Development tools, design systems, and collaborative workflows",
+        "skills": {
+          "securityTools": "Kali Linux / Burp Suite",
+          "networkScanning": "Nmap / RustScan",
+          "exploitation": "Metasploit / Impacket",
+          "adcs": "BloodHound / ADCS Tools",
+          "packetAnalysis": "Wireshark / pfSense"
+        }
       },
       "systems": {
         "title": "Systems & Infrastructure",
-        "description": "Network infrastructure, virtualization, and system administration"
+        "description": "Network infrastructure, virtualization, and system administration",
+        "skills": {
+          "linux": "Linux (Debian / Ubuntu / Kali)",
+          "windows": "Windows Server & AD DS",
+          "vmware": "VMware Workstation",
+          "docker": "Docker & Containerization",
+          "networking": "OSI Model & TCP/IP Routing"
+        }
       },
       "data": {
         "title": "Data & Machine Learning",
-        "description": "Data analysis, statistical modeling, and machine learning solutions"
+        "description": "Data analysis, statistical modeling, and machine learning solutions",
+        "skills": {
+          "dataStack": "R & Python Data Stack",
+          "versionControl": "Git / GitHub & CI/CD",
+          "agile": "Agile Methodologies (Scrum)",
+          "uml": "UML Modeling"
+        }
       }
     }
   },
@@ -313,23 +361,9 @@
     "subtitle": "The path that shaped my engineering perspective",
     "types": {
       "education": "Education",
-      "work": "Work",
-      "project": "Project"
+      "work": "Work"
     },
     "experiences": {
-      "mamaci-hackathon": {
-        "title": "1st Prize - JDN Hackathon",
-        "organization": "Journées du Numérique (JDN)",
-        "period": "June 25-26, 2026",
-        "description": "Developed MamaCi, an award-winning maternal and infant health app. The platform streamlines prenatal care tracking and child vaccinations using the CMU healthcare ID.",
-        "achievements": [
-          "Awarded 1st Prize at the JDN Hackathon",
-          "Built an intelligent scheduling and reminder system",
-          "Integrated a chatbot for medical orientation",
-          "Source code: https://github.com/Z-Isaac08/MamaCI",
-          "Teammates: Tia Djemila, Frean Grâce, Ouedraogo Rabiatou, Bamba Noura"
-        ]
-      },
       "esatic-master": {
         "title": "Master's - Cybersecurity & AI Specialization",
         "organization": "ESATIC - École Supérieure Africaine des TIC",
@@ -353,18 +387,6 @@
           "Designed UML diagrams and followed Unified Process methodology"
         ]
       },
-      "technovore-hackathon": {
-        "title": "2nd Prize - TECHNOVORE HACKATHON",
-        "organization": "Technovore Competition",
-        "period": "Feb 28 - Mar 2, 2025",
-        "description": "Developed 'BioGuard', an intelligent anti-poaching system combining satellite mapping, AI-equipped drones, and acoustic sensors.",
-        "achievements": [
-          "Awarded 2nd Prize for the innovative solution",
-          "Designed hybrid LoRaWAN/VSAT network architecture for remote areas",
-          "Implemented real-time alert system for agents via smartwatches",
-          "Teammates: ABE Monnet Anderson, ALIMBE Ashley Ange-Baruk"
-        ]
-      },
       "esatic-licence": {
         "title": "Bachelor's - Network Systems & Telecommunications",
         "organization": "ESATIC - École Supérieure Africaine des TIC",
@@ -374,17 +396,6 @@
           "Strong foundation in networking protocols",
           "Full-stack web and mobile development skills",
           "Database design and administration"
-        ]
-      },
-      "industry-project": {
-        "title": "Team Lead - Industry 4.0 Project",
-        "organization": "Academic Project",
-        "period": "2023",
-        "description": "Led a team in developing an AI-powered livestock optimization solution as part of an Industry 4.0 initiative.",
-        "achievements": [
-          "Managed team of 4 developers using Agile methodology",
-          "Delivered project 2 weeks ahead of schedule",
-          "Achieved 30% resource optimization in testing"
         ]
       },
       "bac": {
@@ -399,15 +410,84 @@
       }
     }
   },
+  "awards": {
+    "title": "Awards",
+    "subtitle": "Recognition earned through competitive projects",
+    "groups": {
+      "distinction": "Awards and distinctions",
+      "certification": "Certifications"
+    },
+    "links": {
+      "verify": "Verify credential",
+      "viewCode": "View project code"
+    },
+    "closeDetails": "Close certificate details",
+    "issueDateLabel": "Issue date",
+    "credentialIdLabel": "Credential ID",
+    "skillsLabel": "Skills",
+    "items": {
+      "jdn": {
+        "rank": "1st Prize",
+        "title": "JDN Hackathon",
+        "organization": "Journées du Numérique (JDN)",
+        "date": "June 25-26, 2026",
+        "shortDescription": "1st prize for MamaCi, a maternal and child health app.",
+        "description": "Awarded for MamaCi, a maternal and child health application."
+      },
+      "technovore": {
+        "rank": "2nd Prize",
+        "title": "TECHNOVORE Hackathon",
+        "organization": "Technovore Competition",
+        "date": "Feb 28 - Mar 2, 2025",
+        "shortDescription": "2nd prize for BioGuard, an intelligent anti-poaching solution.",
+        "description": "Awarded for BioGuard, an intelligent anti-poaching solution."
+      },
+      "musia": {
+        "rank": "1st Prize",
+        "title": "MUSIA Project | Intelligent Museum Guide",
+        "organization": "CID - Innovation and Development Unit",
+        "date": "December 18, 2025",
+        "shortDescription": "1st prize for an autonomous AI-powered museum guide prototype.",
+        "description": "Designed an autonomous guide robot prototype integrating artificial intelligence and mobile robotics to provide personalized assistance to museum visitors."
+      },
+      "web-rta": {
+        "rank": "Certification",
+        "title": "Certified Web Red Team Analyst (Web-RTA)",
+        "organization": "Cyberwarfare Labs",
+        "date": "6/2/2026",
+        "shortDescription": "Web application penetration testing and red-team certification.",
+        "description": "Earned by passing the hands-on Web-RTA examination, covering web application penetration testing, reconnaissance, injection attacks, authentication and authorization flaws, advanced vectors, and attack chaining.",
+        "imageAlt": "Web-RTA certificate issued to Isaac N'CHO by Cyberwarfare Labs",
+        "verify": "Verify certificate",
+        "openDetails": "View certificate details",
+        "credentialId": "6a1f31919b5a57bc0335459f",
+        "skills": [
+          "Web Security",
+          "App PenTesting",
+          "Red Team Tools",
+          "Exploit Frameworks",
+          "Attack Surface Analysis",
+          "Exploitation",
+          "Defense Evasion",
+          "OSINT"
+        ]
+      }
+    }
+  },
   "contact": {
     "title": "Let's Build Something Together",
     "subtitle": "Have a project in mind or want to discuss opportunities? I'd love to hear from you.",
     "form": {
       "name": "Your Name",
+      "namePlaceholder": "John Doe",
       "email": "Your Email",
+      "emailPlaceholder": "john@example.com",
       "message": "Your Message",
+      "messagePlaceholder": "Your message...",
       "send": "Send Message",
-      "sending": "Sending..."
+      "sending": "Sending...",
+      "sent": "Sent!",
+      "mailtoSubject": "Portfolio Contact from {{name}}"
     },
     "info": {
       "email": "Email",

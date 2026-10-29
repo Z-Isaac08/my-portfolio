@@ -1,4 +1,5 @@
 export { About } from './about';
+export { Awards } from './awards';
 export { Contact } from './contact';
 export { Footer } from './footer';
 export { Hero } from './hero';
